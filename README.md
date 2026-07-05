@@ -1,2 +1,2 @@
 # AeKaNDFilms
-Crafting stories through light, color and emotion
+Crafting Stories Through Light, Color and Emotion
