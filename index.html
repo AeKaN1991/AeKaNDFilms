@@ -6,11 +6,13 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>AeKaN DFilms</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -26,7 +28,7 @@ box-sizing:border-box;
 
 body{
 
-font-family:Arial,sans-serif;
+font-family:Inter,sans-serif;
 
 height:100vh;
 
@@ -34,17 +36,7 @@ overflow:hidden;
 
 color:white;
 
-background:
-
-linear-gradient(
-
-rgba(0,0,0,0.25),
-
-rgba(0,0,0,0.55)
-
-),
-
-url("IMG_1002.png");
+background:url("IMG_1002.png");
 
 background-size:cover;
 
@@ -56,7 +48,7 @@ position:relative;
 
 }
 
-body::after{
+body::before{
 
 content:"";
 
@@ -66,17 +58,19 @@ inset:0;
 
 background:
 
-radial-gradient(
+linear-gradient(
 
-circle at center,
+180deg,
 
-rgba(0,0,0,.15),
+rgba(0,0,0,.25),
 
-rgba(0,0,0,.72)
+rgba(0,0,0,.45),
+
+rgba(0,0,0,.70)
 
 );
 
-pointer-events:none;
+z-index:0;
 
 }
 
@@ -84,7 +78,7 @@ nav{
 
 position:absolute;
 
-top:30px;
+top:10vh;
 
 left:50%;
 
@@ -92,11 +86,11 @@ transform:translateX(-50%);
 
 display:flex;
 
-gap:45px;
-
-z-index:10;
-
 align-items:center;
+
+gap:38px;
+
+z-index:5;
 
 }
 
@@ -106,11 +100,9 @@ text-decoration:none;
 
 color:white;
 
-font-size:15px;
+font-size:.95rem;
 
-font-weight:400;
-
-letter-spacing:1px;
+font-weight:600;
 
 opacity:.9;
 
@@ -122,7 +114,13 @@ nav a:hover{
 
 opacity:1;
 
-color:#d8b46a;
+}
+
+.logo-small{
+
+width:46px;
+
+height:auto;
 
 }
 
@@ -138,41 +136,39 @@ transform:translate(-50%,-50%);
 
 text-align:center;
 
-z-index:5;
-
-width:90%;
-
-max-width:900px;
+z-index:2;
 
 }
 
-.logo{
+.hero-logo{
 
-width:140px;
+width:180px;
 
-margin-bottom:25px;
+margin-bottom:24px;
 
 }
 
 .hero h1{
 
-font-size:72px;
+font-size:4rem;
 
-font-weight:300;
+font-weight:800;
 
-letter-spacing:2px;
+letter-spacing:-2px;
+
+margin-bottom:18px;
 
 }
 
-.tagline{
+.hero p{
 
-margin-top:20px;
+font-size:1.1rem;
 
-font-size:26px;
+font-weight:300;
 
-letter-spacing:2px;
+letter-spacing:1px;
 
-opacity:.95;
+opacity:.9;
 
 }
 
@@ -180,115 +176,65 @@ opacity:.95;
 
 position:absolute;
 
-bottom:60px;
+bottom:12vh;
 
 left:50%;
 
 transform:translateX(-50%);
 
-width:80%;
+width:700px;
 
-max-width:720px;
+max-width:80%;
 
 text-align:center;
 
-line-height:1.8;
-
-font-size:15px;
-
-opacity:.88;
-
-z-index:5;
-
-}
-
-@media(max-width:900px){
-
-nav{
-
-gap:18px;
-
-font-size:12px;
-
-overflow-x:auto;
-
-padding:0 20px;
-
-}
-
-.hero h1{
-
-font-size:44px;
-
-}
-
-.tagline{
-
-font-size:18px;
-
-line-height:1.5;
-
-}
-
-.description{
-
-font-size:13px;
-
-width:90%;
-
-bottom:40px;
-
-}
-
-.logo{
-
-width:110px;
-
-}
-
-}
-
-@media(max-width:600px){
-
-nav{
-
-gap:15px;
-
-font-size:11px;
-
-}
-
-.hero{
-
-top:48%;
-
-}
-
-.hero h1{
-
-font-size:34px;
-
-}
-
-.tagline{
-
-font-size:15px;
-
-}
-
-.description{
-
-font-size:12px;
+font-size:.92rem;
 
 line-height:1.7;
 
-bottom:30px;
+opacity:.75;
+
+z-index:3;
 
 }
 
-.logo{
+@media(max-width:768px){
 
-width:90px;
+nav{
+
+gap:16px;
+
+font-size:.8rem;
+
+top:8vh;
+
+}
+
+.hero-logo{
+
+width:130px;
+
+}
+
+.hero h1{
+
+font-size:2.8rem;
+
+}
+
+.hero p{
+
+font-size:.95rem;
+
+}
+
+.description{
+
+font-size:.8rem;
+
+width:90%;
+
+bottom:8vh;
 
 }
 
@@ -301,6 +247,12 @@ width:90px;
 <body>
 
 <nav>
+
+<a href="#">
+
+<img src="Logo.PNG" class="logo-small">
+
+</a>
 
 <a href="#">Services</a>
 
@@ -316,31 +268,29 @@ width:90px;
 
 </nav>
 
-<div class="hero">
+<section class="hero">
 
-<!-- Replace with logo later -->
-
-<!--
-
-<img class="logo"
-
-src="logo.png">
-
--->
+<img src="Logo.PNG" class="hero-logo">
 
 <h1>AeKaN DFilms</h1>
 
-<p class="tagline">
+<p>
 
 Crafting Stories Through Light, Color and Emotion
 
 </p>
 
-</div>
+</section>
 
 <div class="description">
 
-AeKaN DFilms is an independent video production studio specializing in cinematic storytelling, from concept development and production to post-production and final delivery.
+AeKaN DFilms is an independent video production studio
+
+specializing in end-to-end visual storytelling,
+
+from concept development and production to
+
+post-production and final delivery.
 
 </div>
 
