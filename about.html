@@ -18,16 +18,11 @@
 :root{
 
 --bg:#0B0B0B;
---surface:#111111;
-
 --accent:#C69C5D;
-
 --ink:#EDEAE4;
-
 --ink-dim:#8C8781;
 
 --line:rgba(237,234,228,.09);
-
 --line-strong:rgba(237,234,228,.16);
 
 }
@@ -171,14 +166,6 @@ gap:64px;
 
 padding:72px 0;
 
-border-top:1px solid var(--line);
-
-}
-
-.stage:first-child{
-
-border-top:none;
-
 }
 
 .stage-index-col{
@@ -207,8 +194,6 @@ font-family:'Fraunces',serif;
 
 font-size:38px;
 
-line-height:1.1;
-
 margin-top:22px;
 
 }
@@ -229,11 +214,23 @@ background:var(--line-strong);
 
 max-width:760px;
 
+color:var(--ink-dim);
+
+}
+
+.manifesto p{
+
 font-size:17px;
 
 line-height:2;
 
-color:var(--ink-dim);
+margin-bottom:32px;
+
+}
+
+.manifesto p:last-child{
+
+margin-bottom:0;
 
 }
 
@@ -403,27 +400,19 @@ display:none;
 
 .stage-name{
 
-margin-top:0;
-
 font-size:30px;
 
-}
-
-.page-foot{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:14px;
+margin-top:0;
 
 }
 
-.manifesto{
+.manifesto p{
 
 font-size:16px;
 
 line-height:1.9;
+
+margin-bottom:26px;
 
 }
 
@@ -458,7 +447,7 @@ AeKaN DFilms
 Independent visual storytelling
 rooted in cinematography,
 broadcast experience
-and visual craft.
+and image craftsmanship.
 
 </p>
 
@@ -479,6 +468,7 @@ Kangayam · Tamil Nadu
 </div>
 
 </header>
+
 
 
 <main>
@@ -507,29 +497,44 @@ Studio
 
 </div>
 
+
+
 <div>
 
-<p class="manifesto">
+<div class="manifesto">
+
+<p>
 
 AeKaN DFilms is an independent visual storytelling studio founded by Ashokkumar Nachimuthu, a cinematography graduate from M.G.R. Government Film & Television Institute, Chennai.
 
-<div class="line space">
+</p>
+
+<p>
 
 Built upon formal cinematic training and professional experience across feature film productions, television projects and large-scale broadcast environments, the studio explores storytelling through image, light, composition and color.
 
-<div class="line space">
+</p>
+
+<p>
 
 At AeKaN DFilms, we believe that every story carries its own visual identity. Rather than following trends, our approach is guided by visual language, cinematic expression and a commitment to thoughtful image-making.
 
-<div class="line space">
+</p>
+
+<p>
 
 Drawing from a background that spans cinematic education, production environments and years of broadcast experience, the studio continues to evolve as an independent practice dedicated to image-making, post-production and meaningful visual storytelling.
 
-<div class="line space">
+</p>
+
+<p>
 
 From concept to final delivery, every project is approached with clarity, sensitivity and an enduring commitment to craft.
 
 </p>
+
+</div>
+
 
 
 <div class="founder-block">
@@ -552,7 +557,7 @@ Cinematography Graduate (2012–2015)
 
 <br>
 
-7+ Years in Broadcast Production
+Broadcast Production Experience
 
 <br>
 
@@ -578,6 +583,7 @@ Shaped by craft.
 </section>
 
 </main>
+
 
 
 <footer class="page-foot">
