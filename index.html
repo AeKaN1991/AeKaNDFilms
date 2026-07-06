@@ -1,56 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>
-AeKaN DFilms
-</title>
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500&display=swap"
-rel="stylesheet">
-
-<style>
-
-:root{
-
---bg:#0B0B0B;
---accent:#C69C5D;
---ink:#EDEAE4;
---ink-dim:#8C8781;
---line:rgba(237,234,228,.09);
-
-}
-
-*{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
-}
-
-html{
-
-background:#0B0B0B;
-
-}
-
 body{
 
-background:#0B0B0B;
+background:url("IMG_1002.png");
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+background-attachment:fixed;
 
 color:var(--ink);
 
@@ -58,9 +16,35 @@ font-family:'Inter',sans-serif;
 
 font-weight:300;
 
--webkit-font-smoothing:antialiased;
+overflow-x:hidden;
 
--moz-osx-font-smoothing:grayscale;
+position:relative;
+
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(0,0,0,.62),
+
+rgba(0,0,0,.78),
+
+rgba(0,0,0,.90)
+
+);
+
+z-index:-1;
 
 }
 
@@ -68,7 +52,7 @@ font-weight:300;
 
 max-width:1180px;
 
-margin:0 auto;
+margin:auto;
 
 padding:0 64px;
 
@@ -82,11 +66,11 @@ justify-content:space-between;
 
 }
 
-/* HEADER */
-
 header{
 
-padding-top:72px;
+padding-top:70px;
+
+padding-bottom:30px;
 
 display:flex;
 
@@ -96,7 +80,11 @@ align-items:center;
 
 border-bottom:1px solid var(--line);
 
-padding-bottom:26px;
+animation:fadeUp 1s ease forwards;
+
+opacity:0;
+
+animation-delay:.2s;
 
 }
 
@@ -104,7 +92,7 @@ padding-bottom:26px;
 
 font-size:11px;
 
-letter-spacing:.32em;
+letter-spacing:.34em;
 
 text-transform:uppercase;
 
@@ -116,11 +104,13 @@ nav{
 
 display:flex;
 
-gap:32px;
+gap:34px;
 
 }
 
 nav a{
+
+position:relative;
 
 text-decoration:none;
 
@@ -132,7 +122,7 @@ text-transform:uppercase;
 
 color:var(--ink-dim);
 
-transition:.3s;
+transition:.35s;
 
 }
 
@@ -142,13 +132,44 @@ color:var(--ink);
 
 }
 
-/* HERO */
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-6px;
+
+width:0;
+
+height:1px;
+
+background:var(--accent);
+
+transition:.35s;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+
 
 .hero{
 
-padding-top:90px;
+padding-top:110px;
 
-padding-bottom:120px;
+padding-bottom:150px;
+
+animation:fadeUp 1.2s ease forwards;
+
+opacity:0;
+
+animation-delay:.45s;
 
 }
 
@@ -162,7 +183,7 @@ text-transform:uppercase;
 
 color:var(--accent);
 
-margin-bottom:32px;
+margin-bottom:36px;
 
 }
 
@@ -170,15 +191,15 @@ margin-bottom:32px;
 
 font-family:'Fraunces',serif;
 
-font-size:clamp(74px,12vw,180px);
+font-size:clamp(88px,12vw,188px);
 
 font-weight:300;
 
-line-height:.9;
+line-height:.88;
 
 letter-spacing:-0.03em;
 
-margin-bottom:40px;
+margin-bottom:42px;
 
 }
 
@@ -188,15 +209,15 @@ font-family:'Fraunces',serif;
 
 font-style:italic;
 
-font-size:22px;
+font-size:24px;
 
-line-height:1.6;
+line-height:1.7;
 
-max-width:560px;
+max-width:580px;
 
 color:var(--ink-dim);
 
-margin-bottom:60px;
+margin-bottom:72px;
 
 }
 
@@ -206,9 +227,9 @@ display:grid;
 
 grid-template-columns:340px 1fr;
 
-gap:64px;
+gap:70px;
 
-padding-top:60px;
+padding-top:54px;
 
 border-top:1px solid var(--line);
 
@@ -218,7 +239,7 @@ border-top:1px solid var(--line);
 
 font-family:'Fraunces',serif;
 
-font-size:34px;
+font-size:36px;
 
 line-height:1.15;
 
@@ -228,7 +249,7 @@ line-height:1.15;
 
 font-size:16px;
 
-line-height:1.9;
+line-height:1.95;
 
 max-width:620px;
 
@@ -236,11 +257,36 @@ color:var(--ink-dim);
 
 }
 
-/* FOOTER */
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(35px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
 
 footer{
 
+padding-top:34px;
+
 padding-bottom:72px;
+
+margin-top:120px;
+
+border-top:1px solid var(--line);
 
 display:flex;
 
@@ -248,11 +294,11 @@ justify-content:space-between;
 
 align-items:center;
 
-border-top:1px solid var(--line);
+animation:fadeUp 1.2s ease forwards;
 
-padding-top:32px;
+opacity:0;
 
-margin-top:100px;
+animation-delay:.8s;
 
 }
 
@@ -268,15 +314,13 @@ color:var(--ink-dim);
 
 .footer-left strong{
 
-font-family:'Inter',sans-serif;
+font-family:'Inter';
 
 font-size:11px;
 
 letter-spacing:.14em;
 
 text-transform:uppercase;
-
-font-weight:500;
 
 margin-right:10px;
 
@@ -296,8 +340,6 @@ color:var(--ink-dim);
 
 }
 
-/* MOBILE */
-
 @media(max-width:860px){
 
 .wrap{
@@ -307,6 +349,8 @@ padding:0 28px;
 }
 
 header{
+
+padding-top:52px;
 
 flex-direction:column;
 
@@ -326,21 +370,27 @@ gap:18px;
 
 .hero{
 
-padding-top:72px;
+padding-top:95px;
 
-padding-bottom:80px;
+padding-bottom:120px;
 
 }
 
 .hero h1{
 
-font-size:72px;
+font-size:84px;
+
+margin-bottom:34px;
 
 }
 
 .hero p{
 
-font-size:18px;
+font-size:19px;
+
+line-height:1.75;
+
+margin-bottom:54px;
 
 max-width:100%;
 
@@ -350,17 +400,23 @@ max-width:100%;
 
 grid-template-columns:1fr;
 
-gap:28px;
+gap:42px;
+
+padding-top:46px;
 
 }
 
 .intro-left{
 
-font-size:28px;
+font-size:30px;
 
 }
 
 footer{
+
+margin-top:90px;
+
+padding-bottom:54px;
 
 flex-direction:column;
 
@@ -370,138 +426,3 @@ gap:14px;
 
 }
 
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="wrap">
-
-<header>
-
-<div class="brand">
-
-AeKaN DFilms
-
-</div>
-
-<nav>
-
-<a href="services.html">
-
-Services
-
-</a>
-
-<a href="categories.html">
-
-Categories
-
-</a>
-
-<a href="showreels.html">
-
-Showreels
-
-</a>
-
-<a href="pricing.html">
-
-Pricing
-
-</a>
-
-<a href="about.html">
-
-About
-
-</a>
-
-<a href="contact.html">
-
-Contact
-
-</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="eyebrow">
-
-Independent Visual Storytelling
-
-</div>
-
-<h1>
-
-AeKaN<br>
-
-DFilms
-
-</h1>
-
-<p>
-
-Crafting stories through image,
-color and cinematic language.
-
-</p>
-
-<div class="intro">
-
-<div class="intro-left">
-
-Cinema,
-considered.
-
-</div>
-
-<div class="intro-right">
-
-AeKaN DFilms is an independent visual storytelling studio
-specializing in concept development, production,
-post-production and cinematic finishing.
-
-Every project is approached through image design,
-color intent and narrative clarity, creating films that
-serve both emotion and communication.
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<div class="footer-left">
-
-<strong>
-
-AeKaN DFilms
-
-</strong>
-
-Independent Visual Storytelling Studio
-
-</div>
-
-<div class="footer-right">
-
-Kangayam · Tamil Nadu
-
-</div>
-
-</footer>
-
-</div>
-
-</body>
-
-</html>
