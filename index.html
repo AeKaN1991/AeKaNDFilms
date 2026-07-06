@@ -9,84 +9,75 @@
 <title>AeKaN DFilms</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
 
---bg:#0B0B0B;
 --accent:#C69C5D;
---ink:#EDEAE4;
---ink-dim:#8C8781;
---line:rgba(237,234,228,0.09);
+--text:#EDEAE4;
+--muted:#8C8781;
 
 }
 
 *{
-
 margin:0;
 padding:0;
 box-sizing:border-box;
-
-}
-
-html{
-
-background:var(--bg);
-
 }
 
 body{
 
-background:var(--bg);
+font-family:Inter,sans-serif;
 
-color:var(--ink);
-
-font-family:'Inter',sans-serif;
-
-font-weight:300;
-
-min-height:100vh;
+height:100vh;
 
 overflow:hidden;
 
--webkit-font-smoothing:antialiased;
+color:var(--text);
 
--moz-osx-font-smoothing:grayscale;
+background:url("IMG_1002.png");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+position:relative;
 
 }
 
+body::before{
 
-/* ---------- ATMOSPHERE ---------- */
+content:"";
 
-.background{
-
-position:fixed;
+position:absolute;
 
 inset:0;
 
 background:
 
-linear-gradient(rgba(11,11,11,.72),
-rgba(11,11,11,.72)),
+linear-gradient(
 
-url('IMG_1002.png');
+180deg,
 
-background-size:cover;
+rgba(0,0,0,.25),
 
-background-position:center;
+rgba(0,0,0,.45),
 
-z-index:-1;
+rgba(0,0,0,.72)
+
+);
+
+z-index:0;
 
 }
 
 
-/* ---------- HEADER ---------- */
+/* NAVIGATION */
 
-.site-header{
+nav{
 
 position:absolute;
 
@@ -102,29 +93,27 @@ justify-content:space-between;
 
 align-items:center;
 
-z-index:10;
+z-index:5;
 
 }
 
-
 .brand{
 
-font-size:11px;
+text-decoration:none;
 
-font-weight:500;
+font-size:11px;
 
 letter-spacing:.18em;
 
 text-transform:uppercase;
 
-text-decoration:none;
+font-weight:500;
 
-color:var(--ink);
+color:var(--text);
 
 }
 
-
-nav{
+.nav-links{
 
 display:flex;
 
@@ -132,82 +121,66 @@ gap:34px;
 
 }
 
-
-nav a{
-
-font-size:11px;
-
-letter-spacing:.12em;
-
-text-transform:uppercase;
+.nav-links a{
 
 text-decoration:none;
 
-color:var(--ink-dim);
+font-size:11px;
+
+letter-spacing:.14em;
+
+text-transform:uppercase;
+
+color:var(--muted);
 
 transition:.3s;
 
 }
 
-
-nav a:hover{
+.nav-links a:hover{
 
 color:var(--accent);
 
 }
 
 
-
-/* ---------- HERO ---------- */
+/* HERO */
 
 .hero{
 
-height:100vh;
+position:absolute;
 
-display:flex;
+top:50%;
 
-justify-content:center;
+left:50%;
 
-align-items:center;
+transform:translate(-50%,-50%);
 
 text-align:center;
 
-padding:0 40px;
+z-index:2;
 
 }
-
-
-.hero-content{
-
-margin-top:-4vh;
-
-}
-
 
 .hero h1{
 
-font-family:'Fraunces',serif;
+font-family:Fraunces,serif;
+
+font-size:7rem;
 
 font-weight:300;
 
-font-size:clamp(72px,8vw,132px);
+line-height:.9;
 
-line-height:.92;
+letter-spacing:-3px;
 
-letter-spacing:-0.03em;
-
-color:var(--ink);
+margin-bottom:18px;
 
 }
 
+.hero p{
 
-.tagline{
-
-margin-top:26px;
-
-font-size:18px;
-
-font-weight:400;
+font-size:1rem;
 
 letter-spacing:.04em;
 
@@ -216,20 +189,25 @@ color:var(--accent);
 }
 
 
-
-/* ---------- DESCRIPTION ---------- */
+/* DESCRIPTION */
 
 .description{
 
 position:absolute;
 
-left:8vw;
-
 bottom:18vh;
 
-max-width:560px;
+left:50%;
 
-font-family:'Fraunces',serif;
+transform:translateX(-50%);
+
+width:620px;
+
+max-width:85%;
+
+text-align:center;
+
+font-family:Fraunces,serif;
 
 font-style:italic;
 
@@ -237,77 +215,56 @@ font-size:18px;
 
 line-height:1.7;
 
-color:var(--ink-dim);
+color:var(--muted);
+
+z-index:3;
 
 }
 
 
+/* MOBILE */
 
-/* ---------- RESPONSIVE ---------- */
-
-@media(max-width:960px){
-
-body{
-
-overflow:auto;
-
-}
-
-.site-header{
-
-top:48px;
-
-left:28px;
-
-right:28px;
-
-flex-direction:column;
-
-gap:24px;
-
-align-items:flex-start;
-
-}
+@media(max-width:768px){
 
 nav{
 
-flex-wrap:wrap;
+flex-direction:column;
 
-gap:18px;
+gap:22px;
+
+top:8vh;
 
 }
 
-.hero{
+.nav-links{
 
-padding:0 28px;
+gap:16px;
+
+flex-wrap:wrap;
+
+justify-content:center;
 
 }
 
 .hero h1{
 
-font-size:64px;
+font-size:4rem;
 
 }
 
-.tagline{
+.hero p{
 
-font-size:16px;
+font-size:.9rem;
 
 }
 
 .description{
 
-position:relative;
-
-left:auto;
-
-bottom:auto;
-
-margin:0 28px 60px;
-
-max-width:100%;
+width:90%;
 
 font-size:16px;
+
+bottom:12vh;
 
 }
 
@@ -320,11 +277,7 @@ font-size:16px;
 <body>
 
 
-<div class="background"></div>
-
-
-
-<header class="site-header">
+<nav>
 
 <a href="index.html" class="brand">
 
@@ -332,54 +285,27 @@ AeKaN DFilms
 
 </a>
 
+<div class="nav-links">
 
-<nav>
+<a href="services.html">Services</a>
 
-<a href="services.html">
+<a href="categories.html">Categories</a>
 
-Services
+<a href="showreels.html">Showreels</a>
 
-</a>
+<a href="pricing.html">Pricing</a>
 
-<a href="Categories.html">
+<a href="about.html">About</a>
 
-Categories
+<a href="contact.html">Contact</a>
 
-</a>
-
-<a href="showreels.html">
-
-Showreels
-
-</a>
-
-<a href="Pricing.html">
-
-Pricing
-
-</a>
-
-<a href="about_us.html">
-
-About
-
-</a>
-
-<a href="contact_us.html">
-
-Contact
-
-</a>
+</div>
 
 </nav>
-
-</header>
 
 
 
 <section class="hero">
-
-<div class="hero-content">
 
 <h1>
 
@@ -387,14 +313,11 @@ AeKaN DFilms
 
 </h1>
 
-<p class="tagline">
+<p>
 
-Crafting Stories Through
-Light, Color and Emotion
+Crafting Stories Through Light, Color and Emotion
 
 </p>
-
-</div>
 
 </section>
 
