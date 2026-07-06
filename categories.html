@@ -91,7 +91,34 @@
     line-height:2;
   }
 
-  .head-meta span{ color:var(--ink); }
+.head-meta span{ color:.head-meta span{
+color:var(--ink);
+}
+
+.home-link{
+text-decoration:none;
+color:var(--ink);
+transition:.3s;
+}
+
+.home-link:hover{
+color:var(--accent);
+}
+
+.foot-mark .home-link{
+color:var(--ink);
+font-weight:500;
+font-family:'Inter',sans-serif;
+letter-spacing:0.14em;
+font-size:11px;
+text-transform:uppercase;
+text-decoration:none;
+transition:.3s;
+}
+
+.foot-mark .home-link:hover{
+color:var(--accent);
+}(--ink); }
 
   /* ---------- STAGES ---------- */
 
@@ -216,81 +243,140 @@
 
   /* ---------- RESPONSIVE ---------- */
 
-  @media (max-width: 860px){
-    .wrap{ padding:0 28px; }
-
-    header.page-head{ padding-top:72px; padding-bottom:48px; }
-
-    .head-foot{ flex-direction:column; align-items:flex-start; gap:28px; }
-    .head-meta{ text-align:left; }
-
-    .stage{
-      grid-template-columns:1fr;
-      row-gap:26px;
-      padding:52px 0;
-    }
-
-    .stage-index-col{
-      flex-direction:row;
-      align-items:baseline;
-      justify-content:flex-start;
-      gap:18px;
-    }
-
-    .stage-tick{ display:none; }
-
-    .stage-name{ margin-top:0; font-size:30px; }
-
-    .service-list li .sn{ font-size:20px; }
-
-    footer.page-foot{ flex-direction:column; align-items:flex-start; gap:14px; }
-  }
-
-</style>
+ </style>
 </head>
+
 <body>
 
-  <div class="wrap">
+<div class="wrap">
 
-    <header class="page-head">
-      <div class="eyebrow">What We Create</div>
-      <h1 class="title">Categories</h1>
-      <div class="head-foot">
-        <p>Eight forms of storytelling — each shaped by the story it serves.</p>
-        <div class="head-meta">AeKaN DFilms<br><span>Kangayam · Tamil Nadu</span></div>
-      </div>
-    </header>
+<header class="page-head">
 
-    <main>
+<div class="eyebrow">
+What We Create
+</div>
 
-      <section class="stage">
-        <div class="stage-index-col">
-          <div>
-            <div class="stage-number">01</div>
-            <div class="stage-name">Categories</div>
-          </div>
-          <div class="stage-tick"></div>
-        </div>
-        <ul class="service-list">
-          <li><span class="si">01</span><span class="sn">Commercial Films</span></li>
-          <li><span class="si">02</span><span class="sn">Brand Films</span></li>
-          <li><span class="si">03</span><span class="sn">Corporate Videos</span></li>
-          <li><span class="si">04</span><span class="sn">Documentary Films</span></li>
-          <li><span class="si">05</span><span class="sn">Interviews</span></li>
-          <li><span class="si">06</span><span class="sn">Social Media Content</span></li>
-          <li><span class="si">07</span><span class="sn">Music Videos</span></li>
-          <li><span class="si">08</span><span class="sn">Event Films</span></li>
-        </ul>
-      </section>
+<h1 class="title">
+Categories
+</h1>
 
-    </main>
+<div class="head-foot">
 
-    <footer class="page-foot">
-      <div class="foot-mark"><strong>AeKaN DFilms</strong>Cinema, considered.</div>
-      <div class="foot-loc">Est. Tiruppur District</div>
-    </footer>
+<p>
+Eight forms of storytelling — each shaped by the story it serves.
+</p>
 
-  </div>
+<div class="head-meta">
+
+<a href="index.html" class="home-link">
+AeKaN DFilms
+</a>
+
+<br>
+
+<span>
+Kangayam · Tamil Nadu
+</span>
+
+</div>
+
+</div>
+
+</header>
+
+<main>
+
+<section class="stage">
+
+<div class="stage-index-col">
+
+<div>
+
+<div class="stage-number">
+01
+</div>
+
+<div class="stage-name">
+Categories
+</div>
+
+</div>
+
+<div class="stage-tick"></div>
+
+</div>
+
+<ul class="service-list">
+
+<li>
+<span class="si">01</span>
+<span class="sn">Commercial Films</span>
+</li>
+
+<li>
+<span class="si">02</span>
+<span class="sn">Brand Films</span>
+</li>
+
+<li>
+<span class="si">03</span>
+<span class="sn">Corporate Videos</span>
+</li>
+
+<li>
+<span class="si">04</span>
+<span class="sn">Documentary Films</span>
+</li>
+
+<li>
+<span class="si">05</span>
+<span class="sn">Interviews</span>
+</li>
+
+<li>
+<span class="si">06</span>
+<span class="sn">Social Media Content</span>
+</li>
+
+<li>
+<span class="si">07</span>
+<span class="sn">Music Videos</span>
+</li>
+
+<li>
+<span class="si">08</span>
+<span class="sn">Event Films</span>
+</li>
+
+</ul>
+
+</section>
+
+</main>
+
+<footer class="page-foot">
+
+<div class="foot-mark">
+
+<strong>
+
+<a href="index.html" class="home-link">
+AeKaN DFilms
+</a>
+
+</strong>
+
+Cinema, considered.
+
+</div>
+
+<div class="foot-loc">
+Est. Tiruppur District
+</div>
+
+</footer>
+
+</div>
 
 </body>
 </html>
