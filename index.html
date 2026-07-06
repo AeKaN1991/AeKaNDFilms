@@ -95,6 +95,12 @@ align-items:center;
 
 z-index:5;
 
+opacity:0;
+
+animation:fadeIn 1s ease forwards;
+
+animation-delay:.1s;
+
 }
 
 .brand{
@@ -176,6 +182,14 @@ letter-spacing:-3px;
 
 margin-bottom:18px;
 
+opacity:0;
+
+transform:translateY(24px);
+
+animation:fadeUp 1.3s cubic-bezier(.22,1,.36,1) forwards;
+
+animation-delay:.3s;
+
 }
 
 .hero p{
@@ -186,6 +200,14 @@ letter-spacing:.04em;
 
 color:var(--accent);
 
+opacity:0;
+
+transform:translateY(16px);
+
+animation:fadeUp 1.3s cubic-bezier(.22,1,.36,1) forwards;
+
+animation-delay:.7s;
+
 }
 
 
@@ -195,7 +217,7 @@ color:var(--accent);
 
 position:absolute;
 
-bottom:18vh;
+bottom:24vh;
 
 left:50%;
 
@@ -218,6 +240,130 @@ line-height:1.7;
 color:var(--muted);
 
 z-index:3;
+
+opacity:0;
+
+animation:fadeIn 1.4s ease forwards;
+
+animation-delay:1.1s;
+
+}
+
+
+/* USP ROTATOR */
+
+.usp-rotator{
+
+position:absolute;
+
+bottom:13vh;
+
+left:50%;
+
+transform:translateX(-50%);
+
+font-size:11px;
+
+font-weight:500;
+
+letter-spacing:.22em;
+
+text-transform:uppercase;
+
+color:var(--accent);
+
+z-index:4;
+
+height:16px;
+
+width:90%;
+
+max-width:560px;
+
+overflow:hidden;
+
+opacity:0;
+
+animation:fadeIn 1s ease forwards;
+
+animation-delay:1.4s;
+
+}
+
+.usp-rotator span{
+
+position:absolute;
+
+width:100%;
+
+left:0;
+
+top:0;
+
+opacity:0;
+
+animation:uspCycle 12s infinite;
+
+}
+
+.usp-rotator span:nth-child(1){ animation-delay:0s; }
+
+.usp-rotator span:nth-child(2){ animation-delay:4s; }
+
+.usp-rotator span:nth-child(3){ animation-delay:8s; }
+
+
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+
+to{ opacity:1; }
+
+}
+
+@keyframes fadeUp{
+
+to{ opacity:1; transform:translateY(0); }
+
+}
+
+@keyframes uspCycle{
+
+0%,4%{ opacity:0; transform:translateY(6px); }
+
+10%,30%{ opacity:1; transform:translateY(0); }
+
+36%,100%{ opacity:0; transform:translateY(-6px); }
+
+}
+
+@media (prefers-reduced-motion:reduce){
+
+nav, .hero h1, .hero p, .description, .usp-rotator{
+
+animation:none !important;
+
+opacity:1 !important;
+
+transform:none !important;
+
+}
+
+.usp-rotator span{
+
+animation:none !important;
+
+position:static;
+
+display:none;
+
+}
+
+.usp-rotator span:first-child{
+
+display:block;
+
+}
 
 }
 
@@ -264,7 +410,17 @@ width:90%;
 
 font-size:16px;
 
-bottom:12vh;
+bottom:16vh;
+
+}
+
+.usp-rotator{
+
+bottom:9vh;
+
+font-size:10px;
+
+letter-spacing:.16em;
 
 }
 
@@ -326,6 +482,17 @@ Crafting Stories Through Light, Color and Emotion
 <div class="description">
 
 Independent visual storytelling studio specializing in cinematic production, advanced post-production and image-driven narratives.
+
+</div>
+
+
+<div class="usp-rotator">
+
+<span>7+ Years Broadcast Camera Experience</span>
+
+<span>Cinematography · Colour Grading · Post-Production</span>
+
+<span>Rooted in Tamil Nadu's Textile &amp; Fashion Landscape</span>
 
 </div>
 
