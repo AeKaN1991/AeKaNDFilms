@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — AeKaN DFilms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --bg:#0B0B0B;
+    --surface:#111111;
+    --accent:#C69C5D;
+    --ink:#EDEAE4;
+    --ink-dim:#8C8781;
+    --line:rgba(237,234,228,0.09);
+    --line-strong:rgba(237,234,228,0.16);
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ background:var(--bg); }
+
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+  }
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 64px;
+  }
+
+  /* ---------- HEADER ---------- */
+
+  header.page-head{
+    padding-top:110px;
+    padding-bottom:70px;
+    border-bottom:1px solid var(--line);
+  }
+
+  .eyebrow{
+    font-family:'Inter', sans-serif;
+    font-size:11px;
+    font-weight:500;
+    letter-spacing:0.32em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:28px;
+  }
+
+  h1.title{
+    font-family:'Fraunces', serif;
+    font-weight:300;
+    font-size:clamp(64px, 10vw, 148px);
+    line-height:0.92;
+    letter-spacing:-0.01em;
+    color:var(--ink);
+  }
+
+  .head-foot{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-top:46px;
+  }
+
+  .head-foot p{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:19px;
+    color:var(--ink-dim);
+    max-width:420px;
+    line-height:1.5;
+  }
+
+  .head-meta{
+    font-size:11px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+    text-align:right;
+    line-height:2;
+  }
+
+  .head-meta span{ color:var(--ink); }
+
+  /* ---------- STAGES ---------- */
+
+  main{
+    border-bottom:1px solid var(--line);
+  }
+
+  .stage{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    column-gap:64px;
+    padding:72px 0;
+    border-top:1px solid var(--line);
+    position:relative;
+  }
+
+  .stage:first-child{ border-top:none; }
+
+  .stage-index-col{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+  }
+
+  .stage-number{
+    font-family:'Fraunces', serif;
+    font-weight:300;
+    font-size:20px;
+    color:var(--accent);
+    letter-spacing:0.02em;
+  }
+
+  .stage-name{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-size:38px;
+    line-height:1.12;
+    margin-top:22px;
+    letter-spacing:-0.01em;
+  }
+
+  .stage-tick{
+    margin-top:36px;
+    width:34px;
+    height:1px;
+    background:var(--line-strong);
+  }
+
+  .service-list{
+    list-style:none;
+    border-top:1px solid var(--line);
+  }
+
+  .service-list li{
+    display:grid;
+    grid-template-columns:56px 1fr;
+    align-items:baseline;
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .service-list li .si{
+    font-family:'Inter', sans-serif;
+    font-size:11px;
+    letter-spacing:0.08em;
+    color:var(--ink-dim);
+  }
+
+  .service-list li .sn{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    font-size:23px;
+    letter-spacing:-0.005em;
+    color:var(--ink);
+  }
+
+  /* price row variant — same list, one extra column + description line */
+
+  .price-list li{
+    grid-template-columns:56px 1fr auto;
+    column-gap:28px;
+    align-items:start;
+    padding:28px 0;
+  }
+
+  .sn-wrap{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+  }
+
+  .sd{
+    font-family:'Inter', sans-serif;
+    font-weight:300;
+    font-size:14px;
+    line-height:1.6;
+    color:var(--ink-dim);
+    max-width:480px;
+  }
+
+  .price-list li .sp{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:19px;
+    color:var(--accent);
+    white-space:nowrap;
+    text-align:right;
+    padding-top:2px;
+  }
+
+  .stage-note{
+    margin-top:34px;
+    padding-top:30px;
+    border-top:1px solid var(--line);
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:18px;
+    line-height:1.65;
+    color:var(--ink-dim);
+    max-width:640px;
+  }
+
+  /* ---------- FOOTER RULE ---------- */
+
+  footer.page-foot{
+    padding:40px 0 90px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+
+  .foot-mark{
+    font-family:'Fraunces', serif;
+    font-size:14px;
+    letter-spacing:0.02em;
+    color:var(--ink-dim);
+  }
+
+  .foot-mark strong{
+    color:var(--ink);
+    font-weight:500;
+    font-family:'Inter', sans-serif;
+    letter-spacing:0.14em;
+    font-size:11px;
+    text-transform:uppercase;
+    margin-right:10px;
+  }
+
+  .foot-loc{
+    font-size:11px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+
+  @media (max-width: 860px){
+    .wrap{ padding:0 28px; }
+
+    header.page-head{ padding-top:72px; padding-bottom:48px; }
+
+    .head-foot{ flex-direction:column; align-items:flex-start; gap:28px; }
+    .head-meta{ text-align:left; }
+
+    .stage{
+      grid-template-columns:1fr;
+      row-gap:26px;
+      padding:52px 0;
+    }
+
+    .stage-index-col{
+      flex-direction:row;
+      align-items:baseline;
+      justify-content:flex-start;
+      gap:18px;
+    }
+
+    .stage-tick{ display:none; }
+
+    .stage-name{ margin-top:0; font-size:30px; }
+
+    .service-list li .sn{ font-size:20px; }
+
+    .price-list li{
+      grid-template-columns:56px 1fr;
+      row-gap:10px;
+      padding:26px 0;
+    }
+
+    .sd{ max-width:100%; }
+
+    .price-list li .sp{
+      grid-column:1 / -1;
+      text-align:left;
+      padding-left:56px;
+      padding-top:2px;
+      font-size:17px;
+    }
+
+    footer.page-foot{ flex-direction:column; align-items:flex-start; gap:14px; }
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="wrap">
+
+    <header class="page-head">
+      <div class="eyebrow">Project Investment</div>
+      <h1 class="title">Pricing</h1>
+      <div class="head-foot">
+        <p>Every engagement is scoped and priced around the story — never a fixed rate card.</p>
+        <div class="head-meta">AeKaN DFilms<br><span>Kangayam · Tamil Nadu</span></div>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="stage">
+        <div class="stage-index-col">
+          <div>
+            <div class="stage-number">01</div>
+            <div class="stage-name">Investment</div>
+          </div>
+          <div class="stage-tick"></div>
+        </div>
+        <div>
+          <ul class="service-list price-list">
+            <li>
+              <span class="si">01</span>
+              <div class="sn-wrap">
+                <span class="sn">Commercial Campaigns &amp; Brand Films</span>
+                <span class="sd">Turnkey brand films and commercials, from micro ads to cinematic brand pieces.</span>
+              </div>
+              <span class="sp">from &#8377;25,000</span>
+            </li>
+            <li>
+              <span class="si">02</span>
+              <div class="sn-wrap">
+                <span class="sn">Social Media Growth Bundles</span>
+                <span class="sd">Monthly reel and content retainers for a consistent, cinematic brand presence.</span>
+              </div>
+              <span class="sp">from &#8377;30,000/month</span>
+            </li>
+            <li>
+              <span class="si">03</span>
+              <div class="sn-wrap">
+                <span class="sn">Corporate &amp; Independent Arts</span>
+                <span class="sd">Documentaries, explainers and music videos, crafted with narrative intent.</span>
+              </div>
+              <span class="sp">from &#8377;50,000</span>
+            </li>
+            <li>
+              <span class="si">04</span>
+              <div class="sn-wrap">
+                <span class="sn">Remote Color Grading</span>
+                <span class="sd">Dedicated DI and look development for short films and indie productions.</span>
+              </div>
+              <span class="sp">from &#8377;40,000</span>
+            </li>
+          </ul>
+          <p class="stage-note">Detailed quotations are prepared based on project scope, production requirements and deliverables.</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-foot">
+      <div class="foot-mark"><strong>AeKaN DFilms</strong>Cinema, considered.</div>
+      <div class="foot-loc">Est. Tiruppur District</div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
