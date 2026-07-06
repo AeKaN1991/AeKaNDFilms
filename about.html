@@ -19,33 +19,40 @@
 
 --bg:#0B0B0B;
 --surface:#111111;
+
 --accent:#C69C5D;
+
 --ink:#EDEAE4;
+
 --ink-dim:#8C8781;
---line:rgba(237,234,228,0.09);
---line-strong:rgba(237,234,228,0.16);
+
+--line:rgba(237,234,228,.09);
+
+--line-strong:rgba(237,234,228,.16);
 
 }
 
 *{
+
 margin:0;
 padding:0;
-box-sizing:border-box;
-}
 
-html{
-background:var(--bg);
+box-sizing:border-box;
+
 }
 
 body{
 
 background:var(--bg);
+
 color:var(--ink);
 
 font-family:'Inter',sans-serif;
+
 font-weight:300;
 
 -webkit-font-smoothing:antialiased;
+
 -moz-osx-font-smoothing:grayscale;
 
 }
@@ -54,13 +61,11 @@ font-weight:300;
 
 max-width:1180px;
 
-margin:0 auto;
+margin:auto;
 
 padding:0 64px;
 
 }
-
-/* HEADER */
 
 header.page-head{
 
@@ -126,7 +131,7 @@ line-height:1.5;
 
 color:var(--ink-dim);
 
-max-width:420px;
+max-width:460px;
 
 }
 
@@ -149,9 +154,6 @@ line-height:2;
 color:var(--ink);
 
 }
-
-
-/* MAIN */
 
 main{
 
@@ -223,67 +225,79 @@ background:var(--line-strong);
 
 }
 
-.service-list{
+.manifesto{
 
-list-style:none;
+max-width:760px;
 
-border-top:1px solid var(--line);
+font-size:17px;
 
-}
-
-.service-list li{
-
-display:grid;
-
-grid-template-columns:56px 1fr;
-
-padding:22px 0;
-
-border-bottom:1px solid var(--line);
-
-}
-
-.si{
-
-font-size:11px;
-
-letter-spacing:.08em;
+line-height:2;
 
 color:var(--ink-dim);
 
 }
 
-.sn{
+.founder-block{
 
-font-family:'Fraunces',serif;
+margin-top:54px;
 
-font-size:23px;
+padding-top:32px;
 
-font-weight:400;
+border-top:1px solid var(--line);
 
 }
 
-.stage-note{
+.founder-name{
 
-margin-top:34px;
+font-family:'Fraunces',serif;
 
-padding-top:30px;
+font-size:34px;
 
-border-top:1px solid var(--line);
+margin-bottom:12px;
+
+}
+
+.founder-role{
+
+font-size:11px;
+
+letter-spacing:.18em;
+
+text-transform:uppercase;
+
+color:var(--accent);
+
+margin-bottom:18px;
+
+}
+
+.founder-meta{
+
+font-size:15px;
+
+line-height:1.9;
+
+color:var(--ink-dim);
+
+}
+
+.closing{
+
+margin-top:48px;
 
 font-family:'Fraunces',serif;
 
 font-style:italic;
 
-font-size:18px;
+font-size:20px;
 
-line-height:1.65;
+line-height:1.7;
 
-color:var(--ink-dim);
+color:var(--ink);
+
+opacity:.85;
 
 }
-
-/* FOOTER */
 
 .page-foot{
 
@@ -334,8 +348,6 @@ text-transform:uppercase;
 color:var(--ink-dim);
 
 }
-
-/* MOBILE */
 
 @media(max-width:860px){
 
@@ -397,12 +409,6 @@ font-size:30px;
 
 }
 
-.sn{
-
-font-size:20px;
-
-}
-
 .page-foot{
 
 flex-direction:column;
@@ -410,6 +416,14 @@ flex-direction:column;
 align-items:flex-start;
 
 gap:14px;
+
+}
+
+.manifesto{
+
+font-size:16px;
+
+line-height:1.9;
 
 }
 
@@ -423,18 +437,17 @@ gap:14px;
 
 <div class="wrap">
 
-
 <header class="page-head">
 
 <div class="eyebrow">
 
-Who We Are
+About Us
 
 </div>
 
 <h1 class="title">
 
-About
+AeKaN DFilms
 
 </h1>
 
@@ -443,7 +456,9 @@ About
 <p>
 
 Independent visual storytelling
-guided by image, color and craft.
+rooted in cinematography,
+broadcast experience
+and visual craft.
 
 </p>
 
@@ -492,141 +507,61 @@ Studio
 
 </div>
 
-<ul class="service-list">
-
-<li><span class="si">01</span><span class="sn">Independent Visual Storytelling Studio</span></li>
-
-<li><span class="si">02</span><span class="sn">Cinematic Production</span></li>
-
-<li><span class="si">03</span><span class="sn">Advanced Post Production</span></li>
-
-<li><span class="si">04</span><span class="sn">Image Driven Narratives</span></li>
-
-</ul>
-
-</section>
-
-
-<section class="stage">
-
-<div class="stage-index-col">
-
 <div>
 
-<div class="stage-number">
+<p class="manifesto">
 
-02
+AeKaN DFilms is an independent visual storytelling studio founded by Ashokkumar Nachimuthu, a cinematography graduate from M.G.R. Government Film & Television Institute, Chennai.
 
-</div>
+Built upon formal cinematic training and professional experience across feature film productions, television projects and large-scale broadcast environments, the studio explores storytelling through image, light, composition and color.
 
-<div class="stage-name">
+At AeKaN DFilms, we believe that every story carries its own visual identity. Rather than following trends, our approach is guided by visual language, cinematic expression and a commitment to thoughtful image-making.
 
-Philosophy
+Drawing from a background that spans cinematic education, production environments and years of broadcast experience, the studio continues to evolve as an independent practice dedicated to image-making, post-production and meaningful visual storytelling.
 
-</div>
+From concept to final delivery, every project is approached with clarity, sensitivity and an enduring commitment to craft.
 
-</div>
-
-<div class="stage-tick"></div>
-
-</div>
-
-<ul class="service-list">
-
-<li><span class="si">01</span><span class="sn">Every project deserves its own visual language</span></li>
-
-<li><span class="si">02</span><span class="sn">Craft over convention</span></li>
-
-<li><span class="si">03</span><span class="sn">Intentional image creation</span></li>
-
-<li><span class="si">04</span><span class="sn">Perceptual storytelling</span></li>
-
-</ul>
-
-</section>
+</p>
 
 
-<section class="stage">
+<div class="founder-block">
 
-<div class="stage-index-col">
+<div class="founder-name">
 
-<div>
-
-<div class="stage-number">
-
-03
+Ashokkumar Nachimuthu
 
 </div>
 
-<div class="stage-name">
+<div class="founder-role">
 
-Approach
+Founder, AeKaN DFilms
+
+</div>
+
+<div class="founder-meta">
+
+Cinematography Graduate (2012–2015)
+
+<br>
+
+7+ Years in Broadcast Production
+
+<br>
+
+Cinematographer • Editor • Colorist
 
 </div>
 
 </div>
 
-<div class="stage-tick"></div>
 
-</div>
+<p class="closing">
 
-<ul class="service-list">
+Guided by image.
 
-<li><span class="si">01</span><span class="sn">Pre-Production</span></li>
+<br>
 
-<li><span class="si">02</span><span class="sn">Production</span></li>
-
-<li><span class="si">03</span><span class="sn">Post Production</span></li>
-
-<li><span class="si">04</span><span class="sn">Delivery</span></li>
-
-</ul>
-
-</section>
-
-
-<section class="stage">
-
-<div class="stage-index-col">
-
-<div>
-
-<div class="stage-number">
-
-04
-
-</div>
-
-<div class="stage-name">
-
-Imaging
-
-</div>
-
-</div>
-
-<div class="stage-tick"></div>
-
-</div>
-
-<div>
-
-<ul class="service-list">
-
-<li><span class="si">01</span><span class="sn">Color Workflows</span></li>
-
-<li><span class="si">02</span><span class="sn">Cinematic Finishing</span></li>
-
-<li><span class="si">03</span><span class="sn">Platform Conscious Delivery</span></li>
-
-<li><span class="si">04</span><span class="sn">Exhibition Ready Masters</span></li>
-
-</ul>
-
-<p class="stage-note">
-
-Cinema is not merely captured.
-It is designed, refined and delivered with intention.
+Shaped by craft.
 
 </p>
 
@@ -658,6 +593,7 @@ Kangayam · Tamil Nadu
 </div>
 
 </footer>
+
 
 </div>
 
