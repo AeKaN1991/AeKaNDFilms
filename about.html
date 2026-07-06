@@ -1,44 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About — AeKaN DFilms</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+
+--bg:#0B0B0B;
+--surface:#111111;
+--accent:#C69C5D;
+--ink:#EDEAE4;
+--ink-dim:#8C8781;
+--line:rgba(237,234,228,0.09);
+--line-strong:rgba(237,234,228,0.16);
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+background:var(--bg);
+}
+
+body{
+
+background:var(--bg);
+color:var(--ink);
+
+font-family:'Inter',sans-serif;
+font-weight:300;
+
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+
+}
+
+.wrap{
+
+max-width:1180px;
+
+margin:0 auto;
+
+padding:0 64px;
+
+}
+
+/* HEADER */
+
+header.page-head{
+
+padding-top:110px;
+
+padding-bottom:70px;
+
+border-bottom:1px solid var(--line);
+
+}
+
+.eyebrow{
+
+font-size:11px;
+
+font-weight:500;
+
+letter-spacing:.32em;
+
+text-transform:uppercase;
+
+color:var(--accent);
+
+margin-bottom:28px;
+
+}
+
+.title{
+
+font-family:'Fraunces',serif;
+
+font-weight:300;
+
+font-size:clamp(64px,10vw,148px);
+
+line-height:.92;
+
+letter-spacing:-0.01em;
+
+}
+
+.head-foot{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:flex-end;
+
+margin-top:46px;
+
+}
+
+.head-foot p{
+
+font-family:'Fraunces',serif;
+
+font-style:italic;
+
+font-size:19px;
+
+line-height:1.5;
+
+color:var(--ink-dim);
+
+max-width:420px;
+
+}
+
+.head-meta{
+
+font-size:11px;
+
+letter-spacing:.18em;
+
+text-transform:uppercase;
+
+color:var(--ink-dim);
+
+line-height:2;
+
+}
+
+.head-meta span{
+
+color:var(--ink);
+
+}
+
+
+/* MAIN */
+
+main{
+
+border-bottom:1px solid var(--line);
+
+}
+
+.stage{
+
+display:grid;
+
+grid-template-columns:340px 1fr;
+
+gap:64px;
+
+padding:72px 0;
+
+border-top:1px solid var(--line);
+
+}
+
+.stage:first-child{
+
+border-top:none;
+
+}
+
+.stage-index-col{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+}
+
+.stage-number{
+
+font-family:'Fraunces',serif;
+
+font-size:20px;
+
+color:var(--accent);
+
+}
+
+.stage-name{
+
+font-family:'Fraunces',serif;
+
+font-size:38px;
+
+line-height:1.1;
+
+margin-top:22px;
+
+}
+
+.stage-tick{
+
+margin-top:36px;
+
+width:34px;
+
+height:1px;
+
+background:var(--line-strong);
+
+}
+
+.service-list{
+
+list-style:none;
+
+border-top:1px solid var(--line);
+
+}
+
+.service-list li{
+
+display:grid;
+
+grid-template-columns:56px 1fr;
+
+padding:22px 0;
+
+border-bottom:1px solid var(--line);
+
+}
+
+.si{
+
+font-size:11px;
+
+letter-spacing:.08em;
+
+color:var(--ink-dim);
+
+}
+
+.sn{
+
+font-family:'Fraunces',serif;
+
+font-size:23px;
+
+font-weight:400;
+
+}
+
+.stage-note{
+
+margin-top:34px;
+
+padding-top:30px;
+
+border-top:1px solid var(--line);
+
+font-family:'Fraunces',serif;
+
+font-style:italic;
+
+font-size:18px;
+
+line-height:1.65;
+
+color:var(--ink-dim);
+
+}
+
+/* FOOTER */
+
+.page-foot{
+
+padding:40px 0 90px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.foot-mark{
+
+font-family:'Fraunces',serif;
+
+font-size:14px;
+
+color:var(--ink-dim);
+
+}
+
+.foot-mark strong{
+
+font-family:'Inter';
+
+font-size:11px;
+
+letter-spacing:.14em;
+
+text-transform:uppercase;
+
+margin-right:10px;
+
+color:var(--ink);
+
+}
+
+.foot-loc{
+
+font-size:11px;
+
+letter-spacing:.18em;
+
+text-transform:uppercase;
+
+color:var(--ink-dim);
+
+}
+
+/* MOBILE */
+
+@media(max-width:860px){
+
+.wrap{
+
+padding:0 28px;
+
+}
+
+header.page-head{
+
+padding-top:72px;
+
+padding-bottom:48px;
+
+}
+
+.head-foot{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:28px;
+
+}
+
+.stage{
+
+grid-template-columns:1fr;
+
+gap:28px;
+
+padding:52px 0;
+
+}
+
+.stage-index-col{
+
+flex-direction:row;
+
+gap:18px;
+
+align-items:center;
+
+}
+
+.stage-tick{
+
+display:none;
+
+}
+
+.stage-name{
+
+margin-top:0;
+
+font-size:30px;
+
+}
+
+.sn{
+
+font-size:20px;
+
+}
+
+.page-foot{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:14px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="wrap">
+
+
 <header class="page-head">
 
-  <div class="eyebrow">
+<div class="eyebrow">
 
-    Who We Are
+Who We Are
 
-  </div>
+</div>
 
-  <h1 class="title">
+<h1 class="title">
 
-    About
+About
 
-  </h1>
+</h1>
 
-  <div class="head-foot">
+<div class="head-foot">
 
-    <p>
+<p>
 
-      Independent visual storytelling
-      guided by image, color and craft.
+Independent visual storytelling
+guided by image, color and craft.
 
-    </p>
+</p>
 
-    <div class="head-meta">
+<div class="head-meta">
 
-      AeKaN DFilms
+AeKaN DFilms
 
-      <br>
+<br>
 
-      <span>
+<span>
 
-        Kangayam · Tamil Nadu
+Kangayam · Tamil Nadu
 
-      </span>
+</span>
 
-    </div>
+</div>
 
-  </div>
+</div>
 
 </header>
-
 
 
 <main>
@@ -67,61 +492,19 @@ Studio
 
 </div>
 
-
 <ul class="service-list">
 
-<li>
+<li><span class="si">01</span><span class="sn">Independent Visual Storytelling Studio</span></li>
 
-<span class="si">01</span>
+<li><span class="si">02</span><span class="sn">Cinematic Production</span></li>
 
-<span class="sn">
+<li><span class="si">03</span><span class="sn">Advanced Post Production</span></li>
 
-Independent Visual Storytelling Studio
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">02</span>
-
-<span class="sn">
-
-Cinematic Production
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">03</span>
-
-<span class="sn">
-
-Advanced Post Production
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">04</span>
-
-<span class="sn">
-
-Image Driven Narratives
-
-</span>
-
-</li>
+<li><span class="si">04</span><span class="sn">Image Driven Narratives</span></li>
 
 </ul>
 
 </section>
-
 
 
 <section class="stage">
@@ -148,61 +531,19 @@ Philosophy
 
 </div>
 
-
 <ul class="service-list">
 
-<li>
+<li><span class="si">01</span><span class="sn">Every project deserves its own visual language</span></li>
 
-<span class="si">01</span>
+<li><span class="si">02</span><span class="sn">Craft over convention</span></li>
 
-<span class="sn">
+<li><span class="si">03</span><span class="sn">Intentional image creation</span></li>
 
-Every project deserves its own visual language
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">02</span>
-
-<span class="sn">
-
-Craft over convention
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">03</span>
-
-<span class="sn">
-
-Intentional image creation
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">04</span>
-
-<span class="sn">
-
-Perceptual storytelling
-
-</span>
-
-</li>
+<li><span class="si">04</span><span class="sn">Perceptual storytelling</span></li>
 
 </ul>
 
 </section>
-
 
 
 <section class="stage">
@@ -229,61 +570,19 @@ Approach
 
 </div>
 
-
 <ul class="service-list">
 
-<li>
+<li><span class="si">01</span><span class="sn">Pre-Production</span></li>
 
-<span class="si">01</span>
+<li><span class="si">02</span><span class="sn">Production</span></li>
 
-<span class="sn">
+<li><span class="si">03</span><span class="sn">Post Production</span></li>
 
-Pre-Production
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">02</span>
-
-<span class="sn">
-
-Production
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">03</span>
-
-<span class="sn">
-
-Post Production
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">04</span>
-
-<span class="sn">
-
-Delivery
-
-</span>
-
-</li>
+<li><span class="si">04</span><span class="sn">Delivery</span></li>
 
 </ul>
 
 </section>
-
 
 
 <section class="stage">
@@ -310,58 +609,17 @@ Imaging
 
 </div>
 
-
 <div>
 
 <ul class="service-list">
 
-<li>
+<li><span class="si">01</span><span class="sn">Color Workflows</span></li>
 
-<span class="si">01</span>
+<li><span class="si">02</span><span class="sn">Cinematic Finishing</span></li>
 
-<span class="sn">
+<li><span class="si">03</span><span class="sn">Platform Conscious Delivery</span></li>
 
-Color Workflows
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">02</span>
-
-<span class="sn">
-
-Cinematic Finishing
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">03</span>
-
-<span class="sn">
-
-Platform Conscious Delivery
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">04</span>
-
-<span class="sn">
-
-Exhibition Ready Masters
-
-</span>
-
-</li>
+<li><span class="si">04</span><span class="sn">Exhibition Ready Masters</span></li>
 
 </ul>
 
@@ -377,7 +635,6 @@ It is designed, refined and delivered with intention.
 </section>
 
 </main>
-
 
 
 <footer class="page-foot">
@@ -401,3 +658,9 @@ Kangayam · Tamil Nadu
 </div>
 
 </footer>
+
+</div>
+
+</body>
+
+</html>
