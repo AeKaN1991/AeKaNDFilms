@@ -112,12 +112,17 @@
             grid-template-columns: 340px 1fr;
             gap: 64px;
             padding: 72px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .stage:last-child {
+            border-bottom: none;
         }
 
         .stage-index-col {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
         }
 
         .stage-number {
@@ -128,8 +133,9 @@
 
         .stage-name {
             font-family: 'Fraunces', serif;
-            font-size: 38px;
-            margin-top: 22px;
+            font-size: 30px;
+            margin-top: 14px;
+            line-height: 1.12;
         }
 
         .stage-tick {
@@ -154,10 +160,30 @@
             margin-bottom: 0;
         }
 
+        /* TECH STACK GRID */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 48px 32px;
+            max-width: 760px;
+        }
+
+        .tech-item h4 {
+            font-family: 'Fraunces', serif;
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--ink);
+            margin-bottom: 10px;
+        }
+
+        .tech-item p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--ink-dim);
+        }
+
         .founder-block {
-            margin-top: 54px;
-            padding-top: 32px;
-            border-top: 1px solid var(--line);
+            padding-top: 8px;
         }
 
         .founder-name {
@@ -268,6 +294,11 @@
                 line-height: 1.9;
                 margin-bottom: 26px;
             }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
         }
     </style>
 </head>
@@ -288,13 +319,13 @@
         </header>
 
         <main>
+            <!-- STAGE 01: THE STUDIO MANIFESTO -->
             <section class="stage">
                 <div class="stage-index-col">
                     <div>
                         <div class="stage-number">01</div>
                         <div class="stage-name">Studio</div>
                     </div>
-                    <div class="stage-tick"></div>
                 </div>
 
                 <div>
@@ -305,7 +336,50 @@
                         <p>Drawing from a background that spans cinematic education, production environments and years of broadcast experience, the studio continues to evolve as an independent practice dedicated to image-making, post-production and meaningful visual storytelling.</p>
                         <p>From concept to final delivery, every project is approached with clarity, sensitivity and an enduring commitment to craft.</p>
                     </div>
+                </div>
+            </section>
 
+            <!-- STAGE 02: THE TECH LAB / IMAGING SCIENCE SPECS -->
+            <section class="stage">
+                <div class="stage-index-col">
+                    <div>
+                        <div class="stage-number">02</div>
+                        <div class="stage-name">Lab Specs</div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <h4>Color Management</h4>
+                            <p>Built strictly around scene-referred workflows, utilizing Academy Color Encoding System (ACES) architecture and linear-math grading pipelines for absolute technical and color precision.</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Reference Monitoring</h4>
+                            <p>Every pixel is judged on critically calibrated professional reference displays, targeting precise perceptual results tailored safely for both theatrical projection and major OTT distribution standards.</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Capture Pipeline</h4>
+                            <p>Optimized internal intake pipelines built for handling high-end digital cinema formats, maintaining maximum dynamic range and pure log space from camera sensor to final intermediate wrap.</p>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Look Development</h4>
+                            <p>Bespoke digital intermediate aesthetics built from the ground up—rejecting shortcuts to master authentic subtractive density emulation, grain metrics, and specific filmic responses.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STAGE 03: THE FOUNDER -->
+            <section class="stage">
+                <div class="stage-index-col">
+                    <div>
+                        <div class="stage-number">03</div>
+                        <div class="stage-name">Founder</div>
+                    </div>
+                </div>
+
+                <div>
                     <div class="founder-block">
                         <div class="founder-name">Ashokkumar Nachimuthu</div>
                         <div class="founder-role">Founder, AeKaN DFilms</div>
