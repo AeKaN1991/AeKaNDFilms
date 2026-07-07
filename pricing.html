@@ -5,6 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing — AeKaN DFilms</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Project investment and pricing details for commercial ads, brand films, and cinema post-production at AeKaN DFilms.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph for Link Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pricing — AeKaN DFilms">
+    <meta property="og:description" content="Scoped around the story. Transparent pricing for commercial and independent film projects.">
+    <meta property="og:image" content="https://www.aekandfilms.com/assets/thumbnail.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -153,7 +164,7 @@
             display: grid;
             grid-template-columns: 56px 1fr auto;
             column-gap: 28px;
-            align-items: start;
+            align-items: center; /* சிங்கிள் லைன் கன்டென்ட்டுக்கு சென்டர் அலைன்மென்ட் */
             padding: 28px 0;
             border-bottom: 1px solid var(--line);
         }
@@ -162,13 +173,12 @@
             font-size: 11px;
             letter-spacing: .08em;
             color: var(--ink-dim);
-            padding-top: 6px;
         }
 
         .sn-wrap {
             display: flex;
             flex-direction: column;
-            gap: 9px;
+            gap: 4px; /* கேப் குறைக்கப்பட்டது */
         }
 
         .sn {
@@ -178,18 +188,9 @@
 
         .sd {
             font-size: 14px;
-            line-height: 1.6;
-            color: var(--ink-dim);
-            max-width: 480px;
-        }
-
-        .workflow {
-            font-size: 12px;
-            letter-spacing: 0.02em;
-            color: var(--accent);
-            opacity: 0.85;
-            margin-top: 4px;
             line-height: 1.5;
+            color: var(--ink-dim);
+            max-width: 520px;
         }
 
         .service-list li .sp {
@@ -199,7 +200,6 @@
             color: var(--accent);
             white-space: nowrap;
             text-align: right;
-            padding-top: 2px;
         }
 
         .stage-note {
@@ -208,21 +208,10 @@
             border-top: 1px solid var(--line);
             font-family: 'Fraunces', serif;
             font-style: italic;
-            font-size: 18px;
-            line-height: 1.65;
+            font-size: 16px;
+            line-height: 1.6;
             color: var(--ink-dim);
             max-width: 640px;
-        }
-
-        .stage-note span {
-            display: block;
-            margin-top: 12px;
-            font-family: 'Inter', sans-serif;
-            font-style: normal;
-            font-size: 12px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: var(--ink-dim);
         }
 
         /* FOOTER */
@@ -282,21 +271,19 @@
                 margin-top: 0;
             }
 
-            .price-list li {
+            .service-list li {
                 grid-template-columns: 56px 1fr;
                 row-gap: 10px;
-                padding: 26px 0;
+                padding: 22px 0;
             }
 
             .sd {
                 max-width: 100%;
             }
 
-            .price-list li .sp {
-                grid-column: 1 / -1;
+            .service-list li .sp {
+                grid-column: 2 / -1;
                 text-align: left;
-                padding-left: 56px;
-                padding-top: 2px;
                 font-size: 17px;
             }
         }
@@ -332,8 +319,7 @@
                             <span class="si">01</span>
                             <div class="sn-wrap">
                                 <span class="sn">Micro Ads &amp; Social Promos</span>
-                                <span class="sd">Quick cinematic content for startups and local brands designed for high digital engagement.</span>
-                                <span class="workflow">Workflow: Concept Call &rarr; 1-Day Minimal Shoot &rarr; Standard Display Grading &rarr; Fast Delivery</span>
+                                <span class="sd">Quick cinematic content for startups and local brands designed for high engagement.</span>
                             </div>
                             <span class="sp">from ₹25,000</span>
                         </li>
@@ -341,8 +327,7 @@
                             <span class="si">02</span>
                             <div class="sn-wrap">
                                 <span class="sn">Cinematic Brand Narratives</span>
-                                <span class="sd">Turnkey brand commercials and high-end corporate films built with absolute visual character.</span>
-                                <span class="workflow">Workflow: Storyboarding &rarr; Look Dev (Custom LUT) &rarr; Planned Cinema Setup &rarr; ACES DI &rarr; Sound Design</span>
+                                <span class="sd">Turnkey brand commercials and corporate profiles built with absolute visual character.</span>
                             </div>
                             <span class="sp">from ₹75,000</span>
                         </li>
@@ -350,8 +335,7 @@
                             <span class="si">03</span>
                             <div class="sn-wrap">
                                 <span class="sn">Social Media Content Retainers</span>
-                                <span class="sd">Monthly reel and episodic content bundles to keep a uniform, highly cinematic brand presence.</span>
-                                <span class="workflow">Workflow: Monthly Strategy &rarr; Batched Production &rarr; Tailored Post-Production Pipeline</span>
+                                <span class="sd">Monthly episodic bundles and high-end cinematic reels for consistent brand presence.</span>
                             </div>
                             <span class="sp">from ₹30,000/mo</span>
                         </li>
@@ -359,8 +343,7 @@
                             <span class="si">04</span>
                             <div class="sn-wrap">
                                 <span class="sn">Indie Arts &amp; Music Videos</span>
-                                <span class="sd">Documentaries, independent short forms, and music projects crafted entirely with narrative visual depth.</span>
-                                <span class="workflow">Workflow: Script Breakdown &rarr; Aesthetic Direction &rarr; Comprehensive Post-Production Wrap</span>
+                                <span class="sd">Documentaries, independent short forms, and music projects crafted with narrative depth.</span>
                             </div>
                             <span class="sp">from ₹50,000</span>
                         </li>
@@ -368,15 +351,13 @@
                             <span class="si">05</span>
                             <div class="sn-wrap">
                                 <span class="sn">Remote Color Grading &amp; DI</span>
-                                <span class="sd">Dedicated look development and specialized imaging science pipelines for indie films and digital projects.</span>
-                                <span class="workflow">Workflow: Tech Conform &rarr; Scene-Referred Look Dev &rarr; Subtractive Density Emulation &rarr; Mastering</span>
+                                <span class="sd">Dedicated look development and professional post-production pipelines for digital projects.</span>
                             </div>
                             <span class="sp">from ₹40,000</span>
                         </li>
                     </ul>
                     <div class="stage-note">
-                        <p>Detailed quotations are prepared based on project scope, production requirements and deliverables.</p>
-                        <span>* Base pricing includes core camera kit &amp; post pipeline. Lighting packages and specialized cinema lenses are chartered separately based on project scale.</span>
+                        <p>Detailed quotations are prepared based on project scope, equipment setup and specific delivery formats.</p>
                     </div>
                 </div>
             </section>
