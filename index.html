@@ -126,9 +126,13 @@ padding-bottom:30px;
 
 display:flex;
 
-justify-content:space-between;
+flex-direction:column;
 
 align-items:center;
+
+gap:26px;
+
+text-align:center;
 
 border-bottom:1px solid var(--line);
 
@@ -155,6 +159,10 @@ color:var(--accent);
 nav{
 
 display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
 
 gap:34px;
 
@@ -214,9 +222,17 @@ width:100%;
 
 .hero{
 
-padding-top:110px;
+padding-top:130px;
 
 padding-bottom:150px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+text-align:center;
 
 animation:fadeUp 1.2s ease forwards;
 
@@ -256,7 +272,7 @@ margin-bottom:42px;
 
 }
 
-.hero p{
+.hero p.tagline{
 
 font-family:'Fraunces',serif;
 
@@ -270,46 +286,102 @@ max-width:580px;
 
 color:var(--ink-dim);
 
-margin-bottom:72px;
+margin-bottom:64px;
 
 }
 
-.intro{
+.service-stage{
 
-display:grid;
+position:relative;
 
-grid-template-columns:340px 1fr;
+width:100%;
 
-gap:70px;
+height:56px;
 
-padding-top:54px;
-
-border-top:1px solid var(--line);
+margin-bottom:64px;
 
 }
 
-.intro-left{
+.service-stage span{
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+top:0;
 
 font-family:'Fraunces',serif;
 
-font-size:36px;
+font-style:italic;
 
-line-height:1.15;
+font-weight:400;
+
+font-size:30px;
+
+color:var(--accent);
+
+opacity:0;
+
+animation:serviceFade 24s infinite;
 
 }
 
-.intro-right{
+.service-stage span:nth-child(1){ animation-delay:0s; }
+.service-stage span:nth-child(2){ animation-delay:3s; }
+.service-stage span:nth-child(3){ animation-delay:6s; }
+.service-stage span:nth-child(4){ animation-delay:9s; }
+.service-stage span:nth-child(5){ animation-delay:12s; }
+.service-stage span:nth-child(6){ animation-delay:15s; }
+.service-stage span:nth-child(7){ animation-delay:18s; }
+.service-stage span:nth-child(8){ animation-delay:21s; }
 
-font-size:16px;
+@keyframes serviceFade{
 
-line-height:1.95;
+0%{
 
-max-width:620px;
+opacity:0;
+
+}
+
+4%{
+
+opacity:1;
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+12.5%{
+
+opacity:0;
+
+}
+
+100%{
+
+opacity:0;
+
+}
+
+}
+
+.identity-line{
+
+font-size:11px;
+
+letter-spacing:.32em;
+
+text-transform:uppercase;
 
 color:var(--ink-dim);
 
 }
-
 
 footer{
 
@@ -323,9 +395,13 @@ border-top:1px solid var(--line);
 
 display:flex;
 
-justify-content:space-between;
+flex-direction:column;
 
 align-items:center;
+
+gap:10px;
+
+text-align:center;
 
 animation:fadeUp 1.2s ease forwards;
 
@@ -335,17 +411,7 @@ animation-delay:.8s;
 
 }
 
-.footer-left{
-
-font-family:'Fraunces',serif;
-
-font-size:14px;
-
-color:var(--ink-dim);
-
-}
-
-.footer-left strong{
+.footer-brand{
 
 font-family:'Inter';
 
@@ -355,13 +421,21 @@ letter-spacing:.14em;
 
 text-transform:uppercase;
 
-margin-right:10px;
-
 color:var(--ink);
 
 }
 
-.footer-right{
+.footer-sub{
+
+font-family:'Fraunces',serif;
+
+font-size:14px;
+
+color:var(--ink-dim);
+
+}
+
+.footer-loc{
 
 font-size:11px;
 
@@ -405,17 +479,11 @@ header{
 
 padding-top:52px;
 
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:24px;
+gap:20px;
 
 }
 
 nav{
-
-flex-wrap:wrap;
 
 gap:18px;
 
@@ -423,7 +491,7 @@ gap:18px;
 
 .hero{
 
-padding-top:95px;
+padding-top:100px;
 
 padding-bottom:120px;
 
@@ -435,31 +503,29 @@ font-size:84px;
 
 }
 
-.hero p{
+.hero p.tagline{
 
 font-size:19px;
 
 line-height:1.75;
 
-margin-bottom:54px;
+margin-bottom:52px;
 
 max-width:100%;
 
 }
 
-.intro{
+.service-stage span{
 
-grid-template-columns:1fr;
-
-gap:42px;
-
-padding-top:46px;
+font-size:22px;
 
 }
 
-.intro-left{
+.service-stage{
 
-font-size:30px;
+height:44px;
+
+margin-bottom:52px;
 
 }
 
@@ -468,12 +534,6 @@ footer{
 margin-top:90px;
 
 padding-bottom:54px;
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:14px;
 
 }
 
@@ -553,29 +613,37 @@ DFilms
 
 </h1>
 
-<p>
+<p class="tagline">
 
-Crafting stories through image,
-light, color and cinematic language.
+Crafting stories through<br>
+
+light, color and emotion.
 
 </p>
 
-<div class="intro">
+<div class="service-stage">
 
-<div class="intro-left">
+<span>Product Films</span>
 
-Cinema,
-considered.
+<span>Brand Films</span>
+
+<span>Fashion Films</span>
+
+<span>Corporate Films</span>
+
+<span>Documentaries</span>
+
+<span>Short Films</span>
+
+<span>Theatrical Campaigns</span>
+
+<span>Digital Campaigns</span>
 
 </div>
 
-<div class="intro-right">
+<div class="identity-line">
 
-AeKaN DFilms is an independent visual storytelling studio specializing in concept development, production, post-production and cinematic finishing.
-
-Each project is approached through image design, color intent and narrative clarity — creating films that resonate beyond the frame.
-
-</div>
+Independent Visual Storytelling Studio
 
 </div>
 
@@ -583,19 +651,19 @@ Each project is approached through image design, color intent and narrative clar
 
 <footer>
 
-<div class="footer-left">
-
-<strong>
+<div class="footer-brand">
 
 AeKaN DFilms
 
-</strong>
+</div>
+
+<div class="footer-sub">
 
 Independent Visual Storytelling Studio
 
 </div>
 
-<div class="footer-right">
+<div class="footer-loc">
 
 Kangayam · Tamil Nadu
 
