@@ -2,678 +2,292 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>
-
-AeKaN DFilms
-
-</title>
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500&display=swap"
-rel="stylesheet">
-
-<style>
-
-:root{
-
---bg:#0B0B0B;
---accent:#C69C5D;
---ink:#EDEAE4;
---ink-dim:#8C8781;
---line:rgba(237,234,228,.09);
-
-}
-
-*{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
-}
-
-html{
-
-background:#0B0B0B;
-
-}
-
-body{
-
-background:url("IMG_1002.png");
-
-background-size:cover;
-
-background-position:center;
-
-background-repeat:no-repeat;
-
-background-attachment:fixed;
-
-font-family:'Inter',sans-serif;
-
-color:var(--ink);
-
-overflow-x:hidden;
-
-position:relative;
-
-}
-
-body::before{
-
-content:"";
-
-position:fixed;
-
-inset:0;
-
-background:
-
-linear-gradient(
-
-180deg,
-
-rgba(0,0,0,.55),
-
-rgba(0,0,0,.75),
-
-rgba(0,0,0,.88)
-
-);
-
-z-index:-1;
-
-}
-
-.wrap{
-
-max-width:1180px;
-
-margin:auto;
-
-padding:0 64px;
-
-min-height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:space-between;
-
-}
-
-/* HEADER */
-
-header{
-
-padding-top:70px;
-
-padding-bottom:30px;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-gap:26px;
-
-text-align:center;
-
-border-bottom:1px solid var(--line);
-
-animation:fadeUp 1s ease forwards;
-
-opacity:0;
-
-animation-delay:.2s;
-
-}
-
-.brand{
-
-font-size:11px;
-
-letter-spacing:.34em;
-
-text-transform:uppercase;
-
-color:var(--accent);
-
-}
-
-nav{
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:34px;
-
-}
-
-nav a{
-
-position:relative;
-
-text-decoration:none;
-
-font-size:11px;
-
-letter-spacing:.16em;
-
-text-transform:uppercase;
-
-color:var(--ink-dim);
-
-transition:.35s;
-
-}
-
-nav a:hover{
-
-color:var(--ink);
-
-}
-
-nav a::after{
-
-content:"";
-
-position:absolute;
-
-left:0;
-
-bottom:-6px;
-
-width:0;
-
-height:1px;
-
-background:var(--accent);
-
-transition:.35s;
-
-}
-
-nav a:hover::after{
-
-width:100%;
-
-}
-
-/* HERO */
-
-.hero{
-
-padding-top:130px;
-
-padding-bottom:150px;
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-text-align:center;
-
-animation:fadeUp 1.2s ease forwards;
-
-opacity:0;
-
-animation-delay:.45s;
-
-}
-
-.eyebrow{
-
-font-size:11px;
-
-letter-spacing:.32em;
-
-text-transform:uppercase;
-
-color:var(--accent);
-
-margin-bottom:36px;
-
-}
-
-.hero h1{
-
-font-family:'Fraunces',serif;
-
-font-size:clamp(88px,12vw,188px);
-
-font-weight:300;
-
-line-height:.88;
-
-letter-spacing:-0.03em;
-
-margin-bottom:42px;
-
-}
-
-.hero p.tagline{
-
-font-family:'Fraunces',serif;
-
-font-style:italic;
-
-font-size:24px;
-
-line-height:1.7;
-
-max-width:580px;
-
-color:var(--ink-dim);
-
-margin-bottom:64px;
-
-}
-
-.service-stage{
-
-position:relative;
-
-width:100%;
-
-height:56px;
-
-margin-bottom:64px;
-
-}
-
-.service-stage span{
-
-position:absolute;
-
-left:0;
-
-right:0;
-
-top:0;
-
-font-family:'Fraunces',serif;
-
-font-style:italic;
-
-font-weight:400;
-
-font-size:30px;
-
-color:var(--accent);
-
-opacity:0;
-
-animation:serviceFade 24s infinite;
-
-}
-
-.service-stage span:nth-child(1){ animation-delay:0s; }
-.service-stage span:nth-child(2){ animation-delay:3s; }
-.service-stage span:nth-child(3){ animation-delay:6s; }
-.service-stage span:nth-child(4){ animation-delay:9s; }
-.service-stage span:nth-child(5){ animation-delay:12s; }
-.service-stage span:nth-child(6){ animation-delay:15s; }
-.service-stage span:nth-child(7){ animation-delay:18s; }
-.service-stage span:nth-child(8){ animation-delay:21s; }
-
-@keyframes serviceFade{
-
-0%{
-
-opacity:0;
-
-}
-
-4%{
-
-opacity:1;
-
-}
-
-10%{
-
-opacity:1;
-
-}
-
-12.5%{
-
-opacity:0;
-
-}
-
-100%{
-
-opacity:0;
-
-}
-
-}
-
-.identity-line{
-
-font-size:11px;
-
-letter-spacing:.32em;
-
-text-transform:uppercase;
-
-color:var(--ink-dim);
-
-}
-
-footer{
-
-padding-top:34px;
-
-padding-bottom:72px;
-
-margin-top:120px;
-
-border-top:1px solid var(--line);
-
-display:flex;
-
-flex-direction:column;
-
-align-items:center;
-
-gap:10px;
-
-text-align:center;
-
-animation:fadeUp 1.2s ease forwards;
-
-opacity:0;
-
-animation-delay:.8s;
-
-}
-
-.footer-brand{
-
-font-family:'Inter';
-
-font-size:11px;
-
-letter-spacing:.14em;
-
-text-transform:uppercase;
-
-color:var(--ink);
-
-}
-
-.footer-sub{
-
-font-family:'Fraunces',serif;
-
-font-size:14px;
-
-color:var(--ink-dim);
-
-}
-
-.footer-loc{
-
-font-size:11px;
-
-letter-spacing:.18em;
-
-text-transform:uppercase;
-
-color:var(--ink-dim);
-
-}
-
-@keyframes fadeUp{
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-@media(max-width:860px){
-
-.wrap{
-
-padding:0 28px;
-
-}
-
-header{
-
-padding-top:52px;
-
-gap:20px;
-
-}
-
-nav{
-
-gap:18px;
-
-}
-
-.hero{
-
-padding-top:100px;
-
-padding-bottom:120px;
-
-}
-
-.hero h1{
-
-font-size:84px;
-
-}
-
-.hero p.tagline{
-
-font-size:19px;
-
-line-height:1.75;
-
-margin-bottom:52px;
-
-max-width:100%;
-
-}
-
-.service-stage span{
-
-font-size:22px;
-
-}
-
-.service-stage{
-
-height:44px;
-
-margin-bottom:52px;
-
-}
-
-footer{
-
-margin-top:90px;
-
-padding-bottom:54px;
-
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeKaN DFilms</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0B0B0B;
+            --accent: #C69C5D;
+            --ink: #EDEAE4;
+            --ink-dim: #8C8781;
+            --line: rgba(237, 234, 228, .09);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            background: #0B0B0B;
+        }
+
+        body {
+            background: url("IMG_1002.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Inter', sans-serif;
+            color: var(--ink);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, .55), rgba(0, 0, 0, .75), rgba(0, 0, 0, .88));
+            z-index: -1;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: auto;
+            padding: 0 64px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* HEADER */
+        header {
+            padding-top: 70px;
+            padding-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 26px;
+            text-align: center;
+            border-bottom: 1px solid var(--line);
+            animation: fadeUp 1s ease forwards;
+            opacity: 0;
+            animation-delay: .2s;
+        }
+
+        .brand {
+            font-size: 11px;
+            letter-spacing: .34em;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 34px;
+        }
+
+        nav a {
+            position: relative;
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--ink-dim);
+            transition: .35s;
+        }
+
+        nav a:hover {
+            color: var(--ink);
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: .35s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* HERO */
+        .hero {
+            padding-top: 130px;
+            padding-bottom: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            animation: fadeUp 1.2s ease forwards;
+            opacity: 0;
+            animation-delay: .45s;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: .32em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 36px;
+        }
+
+        .hero h1 {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(88px, 12vw, 188px);
+            font-weight: 300;
+            line-height: .88;
+            letter-spacing: -0.03em;
+            margin-bottom: 42px;
+        }
+
+        .hero p.tagline {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 24px;
+            line-height: 1.7;
+            max-width: 620px;
+            color: var(--ink-dim);
+            margin-bottom: 64px;
+        }
+
+        .service-stage {
+            position: relative;
+            width: 100%;
+            height: 56px;
+            margin-bottom: 64px;
+        }
+
+        .service-stage span {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 30px;
+            color: var(--accent);
+            opacity: 0;
+            animation: serviceFade 8s infinite;
+        }
+
+        /* Ticker Timing for 2 Main Premium Offerings (Total 8s, 4s each) */
+        .service-stage span:nth-child(1){ animation-delay: 0s; }
+        .service-stage span:nth-child(2){ animation-delay: 4s; }
+
+        @keyframes serviceFade {
+            0% { opacity: 0; transform: translateY(5px); }
+            6% { opacity: 1; transform: translateY(0); }
+            44% { opacity: 1; transform: translateY(0); }
+            50% { opacity: 0; transform: translateY(-5px); }
+            100% { opacity: 0; }
+        }
+
+        .identity-line {
+            font-size: 11px;
+            letter-spacing: .32em;
+            text-transform: uppercase;
+            color: var(--ink-dim);
+            line-height: 2;
+        }
+
+        /* FOOTER */
+        footer {
+            padding-top: 34px;
+            padding-bottom: 72px;
+            margin-top: 120px;
+            border-top: 1px solid var(--line);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+            animation: fadeUp 1.2s ease forwards;
+            opacity: 0;
+            animation-delay: .8s;
+        }
+
+        .footer-brand {
+            font-family: 'Inter';
+            font-size: 11px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--ink);
+        }
+
+        .footer-sub {
+            font-family: 'Fraunces', serif;
+            font-size: 14px;
+            color: var(--ink-dim);
+        }
+
+        .footer-loc {
+            font-size: 11px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--ink-dim);
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media(max-width:860px) {
+            .wrap { padding: 0 28px; }
+            header { padding-top: 52px; gap: 20px; }
+            nav { gap: 18px; }
+            .hero { padding-top: 100px; padding-bottom: 120px; }
+            .hero h1 { font-size: 84px; }
+            .hero p.tagline { font-size: 19px; line-height: 1.75; margin-bottom: 52px; max-width: 100%; }
+            .service-stage span { font-size: 22px; }
+            .service-stage { height: 44px; margin-bottom: 52px; }
+            footer { margin-top: 90px; padding-bottom: 54px; }
+        }
+    </style>
 </head>
 
 <body>
-
-<div class="wrap">
-
-<header>
-
-<div class="brand">
-
-AeKaN DFilms
-
-</div>
-
-<nav>
-
-<a href="services.html">
-
-Services
-
-</a>
-
-<a href="categories.html">
-
-Categories
-
-</a>
-
-<a href="showreels.html">
-
-Showreels
-
-</a>
-
-<a href="pricing.html">
-
-Pricing
-
-</a>
-
-<a href="about.html">
-
-About
-
-</a>
-
-<a href="contact.html">
-
-Contact
-
-</a>
-
-</nav>
-
-</header>
-
-<section class="hero">
-
-<div class="eyebrow">
-
-Independent Visual Storytelling
-
-</div>
-
-<h1>
-
-AeKaN<br>
-
-DFilms
-
-</h1>
-
-<p class="tagline">
-
-Crafting stories through<br>
-
-light, color and emotion.
-
-</p>
-
-<div class="service-stage">
-
-<span>Product Films</span>
-
-<span>Brand Films</span>
-
-<span>Fashion Films</span>
-
-<span>Corporate Films</span>
-
-<span>Documentaries</span>
-
-<span>Short Films</span>
-
-<span>Theatrical Campaigns</span>
-
-<span>Digital Campaigns</span>
-
-</div>
-
-<div class="identity-line">
-
-CONCEPT • PRODUCTION • POST •<br>
-MULTI-&nbsp;SCREEN&nbsp;DELIVERY
-
-</div>
-
-</section>
-
-<footer>
-
-<div class="footer-brand">
-
-AeKaN DFilms
-
-</div>
-
-<div class="footer-sub">
-
-Independent Visual Storytelling Studio
-
-</div>
-
-<div class="footer-loc">
-
-Kangayam · Tamil Nadu
-
-</div>
-
-</footer>
-
-</div>
-
+    <div class="wrap">
+        <header>
+            <div class="brand">AeKaN DFilms</div>
+            <nav>
+                <a href="showreels.html">Showreels</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <div class="eyebrow">Independent Visual Storytelling</div>
+            <h1>AeKaN<br>DFilms</h1>
+            <p class="tagline">Cinema considered. Crafting unique visual treatments through lighting design and advanced imaging science.</p>
+
+            <div class="service-stage">
+                <span>Cinematic Brand Narratives</span>
+                <span>Bespoke Look Development &amp; DI</span>
+            </div>
+
+            <div class="identity-line">
+                VISUAL DIRECTION • CINEMATOGRAPHY • COLOR SCIENCE •<br>
+                SCENE-REFERRED WORKFLOWS
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-brand">AeKaN DFilms</div>
+            <div class="footer-sub">Independent Visual Storytelling Studio</div>
+            <div class="footer-loc">Kangayam · Tamil Nadu</div>
+        </footer>
+    </div>
 </body>
 
 </html>
