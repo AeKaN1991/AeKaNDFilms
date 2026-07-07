@@ -2,615 +2,338 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>About — AeKaN DFilms</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<style>
-
-:root{
-
---bg:#0B0B0B;
---accent:#C69C5D;
---ink:#EDEAE4;
---ink-dim:#8C8781;
-
---line:rgba(237,234,228,.09);
---line-strong:rgba(237,234,228,.16);
-
-}
-
-*{
-
-margin:0;
-padding:0;
-
-box-sizing:border-box;
-
-}
-
-body{
-
-background:var(--bg);
-
-color:var(--ink);
-
-font-family:'Inter',sans-serif;
-
-font-weight:300;
-
--webkit-font-smoothing:antialiased;
-
--moz-osx-font-smoothing:grayscale;
-
-}
-
-.wrap{
-
-max-width:1180px;
-
-margin:auto;
-
-padding:0 64px;
-
-}
-
-header.page-head{
-
-padding-top:110px;
-
-padding-bottom:70px;
-
-border-bottom:1px solid var(--line);
-
-}
-
-.eyebrow{
-
-font-size:11px;
-
-font-weight:500;
-
-letter-spacing:.32em;
-
-text-transform:uppercase;
-
-color:var(--accent);
-
-margin-bottom:28px;
-
-}
-
-.title{
-
-font-family:'Fraunces',serif;
-
-font-weight:300;
-
-font-size:clamp(64px,10vw,148px);
-
-line-height:.92;
-
-letter-spacing:-0.01em;
-
-}
-
-.head-foot{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:flex-end;
-
-margin-top:46px;
-
-}
-
-.head-foot p{
-
-font-family:'Fraunces',serif;
-
-font-style:italic;
-
-font-size:19px;
-
-line-height:1.5;
-
-color:var(--ink-dim);
-
-max-width:460px;
-
-}
-
-.head-meta{
-
-font-size:11px;
-
-letter-spacing:.18em;
-
-text-transform:uppercase;
-
-color:var(--ink-dim);
-
-line-height:2;
-
-}
-
-.head-meta span{
-
-color:var(--ink);
-
-}
-
-main{
-
-border-bottom:1px solid var(--line);
-
-}
-
-.stage{
-
-display:grid;
-
-grid-template-columns:340px 1fr;
-
-gap:64px;
-
-padding:72px 0;
-
-}
-
-.stage-index-col{
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:space-between;
-
-}
-
-.stage-number{
-
-font-family:'Fraunces',serif;
-
-font-size:20px;
-
-color:var(--accent);
-
-}
-
-.stage-name{
-
-font-family:'Fraunces',serif;
-
-font-size:38px;
-
-margin-top:22px;
-
-}
-
-.stage-tick{
-
-margin-top:36px;
-
-width:34px;
-
-height:1px;
-
-background:var(--line-strong);
-
-}
-
-.manifesto{
-
-max-width:760px;
-
-color:var(--ink-dim);
-
-}
-
-.manifesto p{
-
-font-size:17px;
-
-line-height:2;
-
-margin-bottom:32px;
-
-}
-
-.manifesto p:last-child{
-
-margin-bottom:0;
-
-}
-
-.founder-block{
-
-margin-top:54px;
-
-padding-top:32px;
-
-border-top:1px solid var(--line);
-
-}
-
-.founder-name{
-
-font-family:'Fraunces',serif;
-
-font-size:34px;
-
-margin-bottom:12px;
-
-}
-
-.founder-role{
-
-font-size:11px;
-
-letter-spacing:.18em;
-
-text-transform:uppercase;
-
-color:var(--accent);
-
-margin-bottom:18px;
-
-}
-
-.founder-meta{
-
-font-size:15px;
-
-line-height:1.9;
-
-color:var(--ink-dim);
-
-}
-
-.closing{
-
-margin-top:48px;
-
-font-family:'Fraunces',serif;
-
-font-style:italic;
-
-font-size:20px;
-
-line-height:1.7;
-
-color:var(--ink);
-
-opacity:.85;
-
-}
-
-.page-foot{
-
-padding:40px 0 90px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-}
-
-.foot-mark{
-
-font-family:'Fraunces',serif;
-
-font-size:14px;
-
-color:var(--ink-dim);
-
-}
-
-.foot-mark strong{
-
-font-family:'Inter';
-
-font-size:11px;
-
-letter-spacing:.14em;
-
-text-transform:uppercase;
-
-margin-right:10px;
-
-color:var(--ink);
-
-}
-
-.foot-loc{
-
-font-size:11px;
-
-letter-spacing:.18em;
-
-text-transform:uppercase;
-
-color:var(--ink-dim);
-
-}
-
-@media(max-width:860px){
-
-.wrap{
-
-padding:0 28px;
-
-}
-
-header.page-head{
-
-padding-top:72px;
-
-padding-bottom:48px;
-
-}
-
-.head-foot{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:28px;
-
-}
-
-.stage{
-
-grid-template-columns:1fr;
-
-gap:28px;
-
-padding:52px 0;
-
-}
-
-.stage-index-col{
-
-flex-direction:row;
-
-gap:18px;
-
-align-items:center;
-
-}
-
-.stage-tick{
-
-display:none;
-
-}
-
-.stage-name{
-
-font-size:30px;
-
-margin-top:0;
-
-}
-
-.manifesto p{
-
-font-size:16px;
-
-line-height:1.9;
-
-margin-bottom:26px;
-
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — AeKaN DFilms</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0B0B0B;
+            --accent: #C69C5D;
+            --ink: #EDEAE4;
+            --ink-dim: #8C8781;
+            --line: rgba(237, 234, 228, .09);
+            --line-strong: rgba(237, 234, 228, .16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: auto;
+            padding: 0 64px;
+        }
+
+        header.page-head {
+            padding-top: 110px;
+            padding-bottom: 70px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: .32em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 28px;
+        }
+
+        .title {
+            font-family: 'Fraunces', serif;
+            font-weight: 300;
+            font-size: clamp(64px, 10vw, 148px);
+            line-height: .92;
+            letter-spacing: -0.01em;
+        }
+
+        .head-foot {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 46px;
+        }
+
+        .head-foot p {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 19px;
+            line-height: 1.5;
+            color: var(--ink-dim);
+            max-width: 460px;
+        }
+
+        .head-meta {
+            font-size: 11px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--ink-dim);
+            line-height: 2;
+        }
+
+        .head-meta span {
+            color: var(--ink);
+        }
+
+        /* Home Link Style */
+        .home-link {
+            text-decoration: none;
+            color: var(--ink);
+            transition: .3s;
+        }
+
+        .home-link:hover {
+            color: var(--accent);
+        }
+
+        main {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .stage {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 64px;
+            padding: 72px 0;
+        }
+
+        .stage-index-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stage-number {
+            font-family: 'Fraunces', serif;
+            font-size: 20px;
+            color: var(--accent);
+        }
+
+        .stage-name {
+            font-family: 'Fraunces', serif;
+            font-size: 38px;
+            margin-top: 22px;
+        }
+
+        .stage-tick {
+            margin-top: 36px;
+            width: 34px;
+            height: 1px;
+            background: var(--line-strong);
+        }
+
+        .manifesto {
+            max-width: 760px;
+            color: var(--ink-dim);
+        }
+
+        .manifesto p {
+            font-size: 17px;
+            line-height: 2;
+            margin-bottom: 32px;
+        }
+
+        .manifesto p:last-child {
+            margin-bottom: 0;
+        }
+
+        .founder-block {
+            margin-top: 54px;
+            padding-top: 32px;
+            border-top: 1px solid var(--line);
+        }
+
+        .founder-name {
+            font-family: 'Fraunces', serif;
+            font-size: 34px;
+            margin-bottom: 12px;
+        }
+
+        .founder-role {
+            font-size: 11px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 18px;
+        }
+
+        .founder-meta {
+            font-size: 15px;
+            line-height: 1.9;
+            color: var(--ink-dim);
+        }
+
+        .closing {
+            margin-top: 48px;
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 20px;
+            line-height: 1.7;
+            color: var(--ink);
+            opacity: .85;
+        }
+
+        .page-foot {
+            padding: 40px 0 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .foot-mark {
+            font-family: 'Fraunces', serif;
+            font-size: 14px;
+            color: var(--ink-dim);
+        }
+
+        .foot-mark strong {
+            font-family: 'Inter';
+            font-size: 11px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            margin-right: 10px;
+        }
+
+        .foot-mark strong .home-link {
+            color: var(--ink);
+        }
+
+        .foot-mark strong .home-link:hover {
+            color: var(--accent);
+        }
+
+        .foot-loc {
+            font-size: 11px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--ink-dim);
+        }
+
+        @media(max-width:860px) {
+            .wrap {
+                padding: 0 28px;
+            }
+
+            header.page-head {
+                padding-top: 72px;
+                padding-bottom: 48px;
+            }
+
+            .head-foot {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 28px;
+            }
+
+            .stage {
+                grid-template-columns: 1fr;
+                gap: 28px;
+                padding: 52px 0;
+            }
+
+            .stage-index-col {
+                flex-direction: row;
+                gap: 18px;
+                align-items: center;
+            }
+
+            .stage-tick {
+                display: none;
+            }
+
+            .stage-name {
+                font-size: 30px;
+                margin-top: 0;
+            }
+
+            .manifesto p {
+                font-size: 16px;
+                line-height: 1.9;
+                margin-bottom: 26px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-<div class="wrap">
-
-<header class="page-head">
-
-<div class="eyebrow">
-
-About Us
-
-</div>
-
-<h1 class="title">
-
-AeKaN DFilms
-
-</h1>
-
-<div class="head-foot">
-
-<p>
-
-Independent visual storytelling
-rooted in cinematography,
-broadcast experience
-and image craftsmanship.
-
-</p>
-
-<div class="head-meta">
-
-AeKaN DFilms
-
-<br>
-
-<span>
-
-Kangayam · Tamil Nadu
-
-</span>
-
-</div>
-
-</div>
-
-</header>
-
-
-
-<main>
-
-<section class="stage">
-
-<div class="stage-index-col">
-
-<div>
-
-<div class="stage-number">
-
-01
-
-</div>
-
-<div class="stage-name">
-
-Studio
-
-</div>
-
-</div>
-
-<div class="stage-tick"></div>
-
-</div>
-
-
-
-<div>
-
-<div class="manifesto">
-
-<p>
-
-AeKaN DFilms is an independent visual storytelling studio founded by Ashokkumar Nachimuthu, a cinematography graduate from M.G.R. Government Film & Television Institute, Chennai.
-
-</p>
-
-<p>
-
-Built upon formal cinematic training and professional experience across feature film productions, television projects and large-scale broadcast environments, the studio explores storytelling through image, light, composition and color.
-
-</p>
-
-<p>
-
-At AeKaN DFilms, we believe that every story carries its own visual identity. Rather than following trends, our approach is guided by visual language, cinematic expression and a commitment to thoughtful image-making.
-
-</p>
-
-<p>
-
-Drawing from a background that spans cinematic education, production environments and years of broadcast experience, the studio continues to evolve as an independent practice dedicated to image-making, post-production and meaningful visual storytelling.
-
-</p>
-
-<p>
-
-From concept to final delivery, every project is approached with clarity, sensitivity and an enduring commitment to craft.
-
-</p>
-
-</div>
-
-
-
-<div class="founder-block">
-
-<div class="founder-name">
-
-Ashokkumar Nachimuthu
-
-</div>
-
-<div class="founder-role">
-
-Founder, AeKaN DFilms
-
-</div>
-
-<div class="founder-meta">
-
-Cinematography Graduate (2012–2015)
-
-<br>
-
-Broadcast Production Experience
-
-<br>
-
-Cinematographer • Editor • Colorist
-
-</div>
-
-</div>
-
-
-<p class="closing">
-
-Guided by image.
-
-<br>
-
-Shaped by craft.
-
-</p>
-
-</div>
-
-</section>
-
-</main>
-
-
-
-<footer class="page-foot">
-
-<div class="foot-mark">
-
-<strong>
-
-AeKaN DFilms
-
-</strong>
-
-Independent Visual Storytelling Studio
-
-</div>
-
-<div class="foot-loc">
-
-Kangayam · Tamil Nadu
-
-</div>
-
-</footer>
-
-
-</div>
-
+    <div class="wrap">
+        <header class="page-head">
+            <div class="eyebrow">About Us</div>
+            <h1 class="title">AeKaN DFilms</h1>
+            <div class="head-foot">
+                <p>Independent visual storytelling rooted in cinematography, broadcast experience and image craftsmanship.</p>
+                <div class="head-meta">
+                    <a href="index.html" class="home-link">AeKaN DFilms</a>
+                    <br>
+                    <span>Kangayam · Tamil Nadu</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="stage">
+                <div class="stage-index-col">
+                    <div>
+                        <div class="stage-number">01</div>
+                        <div class="stage-name">Studio</div>
+                    </div>
+                    <div class="stage-tick"></div>
+                </div>
+
+                <div>
+                    <div class="manifesto">
+                        <p>AeKaN DFilms is an independent visual storytelling studio founded by Ashokkumar Nachimuthu, a cinematography graduate from M.G.R. Government Film & Television Institute, Chennai.</p>
+                        <p>Built upon formal cinematic training and professional experience across feature film productions, television projects and large-scale broadcast environments, the studio explores storytelling through image, light, composition and color.</p>
+                        <p>At AeKaN DFilms, we believe that every story carries its own visual identity. Rather than following trends, our approach is guided by visual language, cinematic expression and a commitment to thoughtful image-making.</p>
+                        <p>Drawing from a background that spans cinematic education, production environments and years of broadcast experience, the studio continues to evolve as an independent practice dedicated to image-making, post-production and meaningful visual storytelling.</p>
+                        <p>From concept to final delivery, every project is approached with clarity, sensitivity and an enduring commitment to craft.</p>
+                    </div>
+
+                    <div class="founder-block">
+                        <div class="founder-name">Ashokkumar Nachimuthu</div>
+                        <div class="founder-role">Founder, AeKaN DFilms</div>
+                        <div class="founder-meta">
+                            Cinematography Graduate (2012–2015)
+                            <br>
+                            Broadcast Production Experience
+                            <br>
+                            Cinematographer • Editor • Colorist
+                        </div>
+                    </div>
+
+                    <p class="closing">
+                        Guided by image.
+                        <br>
+                        Shaped by craft.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="page-foot">
+            <div class="foot-mark">
+                <strong><a href="index.html" class="home-link">AeKaN DFilms</a></strong> Independent Visual Storytelling Studio
+            </div>
+            <div class="foot-loc">Kangayam · Tamil Nadu</div>
+        </footer>
+    </div>
 </body>
 
 </html>
