@@ -1,436 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — AeKaN DFilms</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Contact — AeKaN DFilms</title>
 
-    <style>
-        :root {
-            --bg: #0B0B0B;
-            --accent: #C69C5D;
-            --ink: #EDEAE4;
-            --ink-dim: #8C8781;
-            --line: rgba(237, 234, 228, .09);
-            --line-strong: rgba(237, 234, 228, .16);
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-        body {
-            background: var(--bg);
-            color: var(--ink);
-            font-family: 'Inter', sans-serif;
-            font-weight: 300;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+<style>
 
-        .wrap {
-            max-width: 1180px;
-            margin: auto;
-            padding: 0 64px;
-        }
+:root{
+--bg:#0B0B0B;
+--surface:#111111;
+--accent:#C69C5D;
+--ink:#EDEAE4;
+--ink-dim:#8C8781;
+--line:rgba(237,234,228,0.09);
+--line-strong:rgba(237,234,228,0.16);
+}
 
-        header.page-head {
-            padding-top: 110px;
-            padding-bottom: 70px;
-            border-bottom: 1px solid var(--line);
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        .eyebrow {
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: .32em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 28px;
-        }
+html{
+background:var(--bg);
+}
 
-        .title {
-            font-family: 'Fraunces', serif;
-            font-weight: 300;
-            font-size: clamp(64px, 10vw, 148px);
-            line-height: .92;
-            letter-spacing: -0.01em;
-        }
+body{
+background:var(--bg);
+color:var(--ink);
+font-family:'Inter',sans-serif;
+font-weight:300;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+}
 
-        .head-foot {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-top: 46px;
-        }
+.wrap{
+max-width:1180px;
+margin:0 auto;
+padding:0 64px;
+}
 
-        .head-foot p {
-            font-family: 'Fraunces', serif;
-            font-style: italic;
-            font-size: 19px;
-            line-height: 1.5;
-            color: var(--ink-dim);
-            max-width: 460px;
-        }
+header.page-head{
+padding-top:110px;
+padding-bottom:70px;
+border-bottom:1px solid var(--line);
+}
 
-        .head-meta {
-            font-size: 11px;
-            letter-spacing: .18em;
-            text-transform: uppercase;
-            color: var(--ink-dim);
-            line-height: 2;
-        }
+.eyebrow{
+font-size:11px;
+font-weight:500;
+letter-spacing:.32em;
+text-transform:uppercase;
+color:var(--accent);
+margin-bottom:28px;
+}
 
-        .head-meta span {
-            color: var(--ink);
-        }
+h1.title{
+font-family:'Fraunces',serif;
+font-weight:300;
+font-size:clamp(64px,10vw,148px);
+line-height:.92;
+letter-spacing:-.01em;
+}
 
-        .home-link {
-            text-decoration: none;
-            color: var(--ink);
-            transition: .3s;
-        }
+.head-foot{
+display:flex;
+justify-content:space-between;
+align-items:flex-end;
+margin-top:46px;
+}
 
-        .home-link:hover {
-            color: var(--accent);
-        }
+.head-foot p{
+font-family:'Fraunces',serif;
+font-style:italic;
+font-size:19px;
+color:var(--ink-dim);
+max-width:420px;
+line-height:1.5;
+}
 
-        main {
-            border-bottom: 1px solid var(--line);
-        }
+.head-meta{
+font-size:11px;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:var(--ink-dim);
+text-align:right;
+line-height:2;
+}
 
-        .stage {
-            display: grid;
-            grid-template-columns: 340px 1fr;
-            gap: 64px;
-            padding: 72px 0;
-            border-bottom: 1px solid var(--line);
-        }
+.head-meta span{
+color:var(--ink);
+}
 
-        .stage:last-child {
-            border-bottom: none;
-        }
+.home-link{
+text-decoration:none;
+color:var(--ink);
+transition:.3s;
+}
 
-        .stage-index-col {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
+.home-link:hover{
+color:var(--accent);
+}
 
-        .stage-number {
-            font-family: 'Fraunces', serif;
-            font-size: 20px;
-            color: var(--accent);
-        }
+.foot-mark .home-link{
+font-family:'Inter',sans-serif;
+font-size:11px;
+letter-spacing:.14em;
+text-transform:uppercase;
+font-weight:500;
+color:var(--ink);
+text-decoration:none;
+}
 
-        .stage-name {
-            font-family: 'Fraunces', serif;
-            font-size: 30px;
-            margin-top: 14px;
-            line-height: 1.12;
-        }
+.foot-mark .home-link:hover{
+color:var(--accent);
+}
 
-        .stage-tick {
-            margin-top: 36px;
-            width: 34px;
-            height: 1px;
-            background: var(--line-strong);
-        }
+main{
+border-bottom:1px solid var(--line);
+}
 
-        .manifesto {
-            max-width: 760px;
-            color: var(--ink-dim);
-        }
+.stage{
+display:grid;
+grid-template-columns:340px 1fr;
+column-gap:64px;
+padding:72px 0;
+border-bottom:1px solid var(--line);
+}
 
-        .manifesto p {
-            font-size: 17px;
-            line-height: 2;
-            margin-bottom: 32px;
-        }
+.stage:last-child {
+border-bottom: none;
+}
 
-        .manifesto p:last-child {
-            margin-bottom: 0;
-        }
+.stage-index-col{
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+}
 
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 48px 32px;
-            max-width: 760px;
-        }
+.stage-number{
+font-family:'Fraunces',serif;
+font-size:20px;
+color:var(--accent);
+}
 
-        .tech-item h4 {
-            font-family: 'Fraunces', serif;
-            font-size: 20px;
-            font-weight: 400;
-            color: var(--ink);
-            margin-bottom: 10px;
-        }
+.stage-name{
+font-family:'Fraunces',serif;
+font-size:38px;
+margin-top:22px;
+line-height:1.12;
+}
 
-        .tech-item p {
-            font-size: 14px;
-            line-height: 1.6;
-            color: var(--ink-dim);
-        }
+.stage-tick{
+margin-top:36px;
+width:34px;
+height:1px;
+background:var(--line-strong);
+}
 
-        .founder-block {
-            padding-top: 8px;
-        }
+.service-list{
+list-style:none;
+border-top:1px solid var(--line);
+}
 
-        .founder-name {
-            font-family: 'Fraunces', serif;
-            font-size: 34px;
-            margin-bottom: 12px;
-        }
+.service-list li{
+display:grid;
+grid-template-columns:56px 1fr;
+padding:28px 0;
+border-bottom:1px solid var(--line);
+align-items: center;
+}
 
-        .founder-role {
-            font-size: 11px;
-            letter-spacing: .18em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 18px;
-        }
+.si{
+font-size:11px;
+letter-spacing:.08em;
+color:var(--ink-dim);
+}
 
-        .founder-meta {
-            font-size: 15px;
-            line-height: 1.9;
-            color: var(--ink-dim);
-        }
+.sn{
+font-family:'Fraunces',serif;
+font-size:24px;
+}
 
-        .closing {
-            margin-top: 48px;
-            font-family: 'Fraunces', serif;
-            font-style: italic;
-            font-size: 20px;
-            line-height: 1.7;
-            color: var(--ink);
-            opacity: .85;
-        }
+.sn a {
+color: var(--ink);
+text-decoration: none;
+transition: .3s;
+}
 
-        .page-foot {
-            padding: 40px 0 90px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.sn a:hover {
+color: var(--accent);
+}
 
-        .foot-mark {
-            font-family: 'Fraunces', serif;
-            font-size: 14px;
-            color: var(--ink-dim);
-        }
+.sn span.label {
+font-family: 'Inter', sans-serif;
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: .12em;
+color: var(--ink-dim);
+margin-left: 12px;
+display: inline-block;
+vertical-align: middle;
+}
 
-        .foot-mark strong {
-            font-family: 'Inter';
-            font-size: 11px;
-            letter-spacing: .14em;
-            text-transform: uppercase;
-            margin-right: 10px;
-        }
+.portfolio-text {
+max-width: 760px;
+color: var(--ink-dim);
+font-size: 16px;
+line-height: 1.8;
+}
 
-        .foot-mark strong .home-link {
-            color: var(--ink);
-        }
+.portfolio-text strong {
+color: var(--ink);
+font-weight: 400;
+}
 
-        .foot-mark strong .home-link:hover {
-            color: var(--accent);
-        }
+.stage-note{
+margin-top:34px;
+padding-top:30px;
+border-top:1px solid var(--line);
+font-family:'Fraunces',serif;
+font-style:italic;
+font-size:18px;
+line-height:1.6;
+color:var(--ink-dim);
+}
 
-        .foot-loc {
-            font-size: 11px;
-            letter-spacing: .18em;
-            text-transform: uppercase;
-            color: var(--ink-dim);
-        }
+footer.page-foot{
+padding:40px 0 90px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-        @media(max-width:860px) {
-            .wrap {
-                padding: 0 28px;
-            }
+.foot-mark{
+font-family:'Fraunces',serif;
+font-size:14px;
+color:var(--ink-dim);
+}
 
-            header.page-head {
-                padding-top: 72px;
-                padding-bottom: 48px;
-            }
+.foot-loc{
+font-size:11px;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:var(--ink-dim);
+}
 
-            .head-foot {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 28px;
-            }
+@media(max-width:860px){
+.wrap{
+padding:0 28px;
+}
+header.page-head{
+padding-top:72px;
+padding-bottom:48px;
+}
+.head-foot{
+flex-direction:column;
+align-items:flex-start;
+gap:28px;
+}
+.head-meta{
+text-align:left;
+}
+.stage{
+grid-template-columns:1fr;
+row-gap:26px;
+padding:52px 0;
+}
+.stage-index-col{
+flex-direction:row;
+gap:18px;
+}
+.stage-tick{
+display:none;
+}
+.stage-name{
+margin-top:0;
+font-size:30px;
+}
+.sn{
+font-size:20px;
+}
+.sn span.label {
+display: block;
+margin-left: 0;
+margin-top: 4px;
+}
+footer.page-foot{
+flex-direction:column;
+align-items:flex-start;
+gap:14px;
+}
+}
 
-            .stage {
-                grid-template-columns: 1fr;
-                gap: 28px;
-                padding: 52px 0;
-            }
-
-            .stage-index-col {
-                flex-direction: row;
-                gap: 18px;
-                align-items: center;
-            }
-
-            .stage-tick {
-                display: none;
-            }
-
-            .stage-name {
-                font-size: 30px;
-                margin-top: 0;
-            }
-
-            .manifesto p {
-                font-size: 16px;
-                line-height: 1.9;
-                margin-bottom: 26px;
-            }
-
-            .tech-grid {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-        }
-    </style>
+</style>
 </head>
 
 <body>
-    <div class="wrap">
-        <header class="page-head">
-            <div class="eyebrow">About Us</div>
-            <h1 class="title">AeKaN DFilms</h1>
-            <div class="head-foot">
-                <p>Independent visual storytelling rooted in cinematography, broadcast experience and image craftsmanship.</p>
-                <div class="head-meta">
-                    <a href="index.html" class="home-link">AeKaN DFilms</a>
-                    <br>
-                    <span>Kangayam · Tamil Nadu</span>
-                </div>
-            </div>
-        </header>
 
-        <main>
-            <!-- STAGE 01: THE STUDIO MANIFESTO -->
-            <section class="stage">
-                <div class="stage-index-col">
-                    <div>
-                        <div class="stage-number">01</div>
-                        <div class="stage-name">Studio</div>
-                    </div>
-                </div>
+<div class="wrap">
+<header class="page-head">
+<div class="eyebrow">Get In Touch</div>
+<h1 class="title">Contact</h1>
+<div class="head-foot">
+<p>Available for collaborations, commissions and visual storytelling projects.</p>
+<div class="head-meta">
+<a href="index.html" class="home-link">AeKaN DFilms</a>
+<br>
+<span>Kangayam · Tamil Nadu</span>
+</div>
+</div>
+</header>
 
-                <div>
-                    <div class="manifesto">
-                        <p>AeKaN DFilms is an independent visual storytelling studio founded by Ashokkumar Nachimuthu, a cinematography graduate from M.G.R. Government Film & Television Institute, Chennai.</p>
-                        <p>Built upon formal cinematic training and professional experience across feature film productions, television projects and large-scale broadcast environments, the studio explores storytelling through image, light, composition and color.</p>
-                        <p>At AeKaN DFilms, we believe that every story carries its own visual identity. Rather than following trends, our approach is guided by visual language, cinematic expression and a commitment to thoughtful image-making.</p>
-                        <p>Drawing from a background that spans cinematic education, production environments and years of broadcast experience, the studio continues to evolve as an independent practice dedicated to image-making, post-production and meaningful visual storytelling.</p>
-                        <p>From concept to final delivery, every project is approached with clarity, sensitivity and an enduring commitment to craft.</p>
-                    </div>
-                </div>
-            </section>
+<main>
+<!-- STAGE 01: CONTACT CHANNELS -->
+<section class="stage">
+<div class="stage-index-col">
+<div>
+<div class="stage-number">01</div>
+<div class="stage-name">Channels</div>
+</div>
+<div class="stage-tick"></div>
+</div>
 
-            <!-- STAGE 02: THE TECH LAB / IMAGING SCIENCE SPECS -->
-            <section class="stage">
-                <div class="stage-index-col">
-                    <div>
-                        <div class="stage-number">02</div>
-                        <div class="stage-name">Lab Specs</div>
-                    </div>
-                </div>
+<div>
+<ul class="service-list">
+<!-- Instagram Link -->
+<li>
+<span class="si">01</span>
+<span class="sn">
+<a href="https://www.instagram.com/aekan_dfilms?igsh=MXBxbTl3dWExbGh4ag==" target="_blank">@aekan_dfilms</a>
+<span class="label">Instagram</span>
+</span>
+</li>
 
-                <div>
-                    <div class="tech-grid">
-                        <!-- 1. Capture Pipeline -->
-                        <div class="tech-item">
-                            <h4>Capture Pipeline</h4>
-                            <p>Optimized internal intake pipelines built for handling high-end digital cinema formats, maintaining maximum dynamic range and pure log space from camera sensor to final intermediate wrap.</p>
-                        </div>
+<!-- Email Link -->
+<li>
+<span class="si">02</span>
+<span class="sn">
+<a href="mailto:aekandfilms@gmail.com">aekandfilms@gmail.com</a>
+<span class="label">Email</span>
+</span>
+</li>
 
-                        <!-- 2. Color Management -->
-                        <div class="tech-item">
-                            <h4>Color Management</h4>
-                            <p>Built strictly around scene-referred workflows, utilizing Academy Color Encoding System (ACES) architecture and linear-math grading pipelines for absolute technical and color precision.</p>
-                        </div>
+<!-- Direct Phone Link -->
+<li>
+<span class="si">03</span>
+<span class="sn">
+<a href="tel:+916384373106">+91 63843 73106</a>
+<span class="label">Voice Call</span>
+</span>
+</li>
 
-                        <!-- 3. Look Development -->
-                        <div class="tech-item">
-                            <h4>Look Development</h4>
-                            <p>Bespoke digital intermediate aesthetics built from the ground up—rejecting shortcuts to master authentic subtractive density emulation, grain metrics, and specific filmic responses.</p>
-                        </div>
+<!-- Dedicated WhatsApp Link -->
+<li>
+<span class="si">04</span>
+<span class="sn">
+<a href="https://wa.me/916384373106" target="_blank">+91 63843 73106</a>
+<span class="label">WhatsApp</span>
+</span>
+</li>
 
-                        <!-- 4. Multi-Screen Optimization -->
-                        <div class="tech-item">
-                            <h4>Multi-Screen Optimization</h4>
-                            <p>Ensuring your video looks exactly the same, with correct colors and details, whether it is played on mobile screens, television, or local theater displays.</p>
-                        </div>
+<!-- Location -->
+<li>
+<span class="si">05</span>
+<span class="sn">
+Kangayam, Tamil Nadu, India
+<span class="label">Studio Base</span>
+</span>
+</li>
+</ul>
+</div>
+</section>
 
-                        <!-- 5. Platform-Ready Delivery -->
-                        <div class="tech-item">
-                            <h4>Platform-Ready Delivery</h4>
-                            <p>Creating high-quality final video files that are perfectly ready for digital platforms like YouTube, and fully compatible for local commercial theater advertisements.</p>
-                        </div>
+<!-- STAGE 02: PORTFOLIO INITIATIVE (OFFER SECTION) -->
+<section class="stage">
+<div class="stage-index-col">
+<div>
+<div class="stage-number">02</div>
+<div class="stage-name">Initiative</div>
+</div>
+<div class="stage-tick"></div>
+</div>
 
-                        <!-- 6. Gamma & Contrast Control -->
-                        <div class="tech-item">
-                            <h4>Gamma & Contrast Control</h4>
-                            <p>Adjusting video settings correctly to prevent any unwanted color or darkness shifts when your video is uploaded to the internet or viewed on different phones.</p>
-                        </div>
+<div>
+<div class="portfolio-text">
+<p><strong>Profile Building Collaboration</strong> — Currently extending exclusive introductory rates and specialized pricing for selected independent projects and local commercial brands looking to build high-end visual assets.</p>
+</div>
+<p class="stage-note">Open for commercial advertisements, independent films, and multi-screen video mastering.</p>
+</div>
+</section>
+</main>
 
-                        <!-- 7. Reference Monitoring -->
-                        <div class="tech-item">
-                            <h4>Reference Monitoring</h4>
-                            <p>Every pixel is judged on critically calibrated professional reference displays, targeting precise perceptual results tailored safely for both theatrical projection and major OTT distribution standards.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+<footer class="page-foot">
+<div class="foot-mark">
+<strong><a href="index.html" class="home-link">AeKaN DFilms</a></strong> Independent Visual Storytelling Studio
+</div>
+<div class="foot-loc">Kangayam · Tamil Nadu</div>
+</footer>
+</div>
 
-            <!-- STAGE 03: THE FOUNDER -->
-            <section class="stage">
-                <div class="stage-index-col">
-                    <div>
-                        <div class="stage-number">03</div>
-                        <div class="stage-name">Founder</div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="founder-block">
-                        <div class="founder-name">Ashokkumar Nachimuthu</div>
-                        <div class="founder-role">Founder, AeKaN DFilms</div>
-                        <div class="founder-meta">
-                            Cinematography Graduate (2012–2015)
-                            <br>
-                            Broadcast Production Experience
-                            <br>
-                            Cinematographer • Editor • Colorist
-                        </div>
-                    </div>
-
-                    <p class="closing">
-                        Guided by image.
-                        <br>
-                        Shaped by craft.
-                    </p>
-                </div>
-            </section>
-        </main>
-
-        <footer class="page-foot">
-            <div class="foot-mark">
-                <strong><a href="index.html" class="home-link">AeKaN DFilms</a></strong> Independent Visual Storytelling Studio
-            </div>
-            <div class="foot-loc">Kangayam · Tamil Nadu</div>
-        </footer>
-    </div>
 </body>
-
 </html>
