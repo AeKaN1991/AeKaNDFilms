@@ -2,720 +2,412 @@
 <html lang="en">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Showreels — AeKaN DFilms</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
-<style>
-
-:root{
-
---bg:#0B0B0B;
---accent:#C69C5D;
---ink:#EDEAE4;
---ink-dim:#8C8781;
-
---line:rgba(237,234,228,.09);
-
---line-strong:rgba(237,234,228,.16);
-
-}
-
-*{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-
-}
-
-body{
-
-background:var(--bg);
-
-color:var(--ink);
-
-font-family:'Inter',sans-serif;
-
-font-weight:300;
-
--webkit-font-smoothing:antialiased;
-
--moz-osx-font-smoothing:grayscale;
-
-}
-
-.wrap{
-
-max-width:1180px;
-
-margin:auto;
-
-padding:0 64px;
-
-}
-
-
-/* HEADER */
-
-.page-head{
-
-padding-top:110px;
-
-padding-bottom:70px;
-
-border-bottom:1px solid var(--line);
-
-}
-
-.eyebrow{
-
-font-size:11px;
-
-letter-spacing:.32em;
-
-text-transform:uppercase;
-
-font-weight:500;
-
-color:var(--accent);
-
-margin-bottom:28px;
-
-}
-
-.title{
-
-font-family:'Fraunces',serif;
-
-font-size:clamp(64px,10vw,148px);
-
-font-weight:300;
-
-line-height:.92;
-
-letter-spacing:-.01em;
-
-}
-
-.head-foot{
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:flex-end;
-
-margin-top:46px;
-
-}
-
-.head-foot p{
-
-font-family:'Fraunces',serif;
-
-font-style:italic;
-
-font-size:19px;
-
-line-height:1.5;
-
-color:var(--ink-dim);
-
-max-width:420px;
-
-}
-
-.head-meta{
-
-font-size:11px;
-
-letter-spacing:.18em;
-
-text-transform:uppercase;
-
-line-height:2;
-
-color:var(--ink-dim);
-
-}
-
-.head-meta span{
-
-color:var(--ink);
-
-}
-
-
-/* MAIN */
-
-main{
-
-border-bottom:1px solid var(--line);
-
-}
-
-.stage{
-
-display:grid;
-
-grid-template-columns:340px 1fr;
-
-column-gap:64px;
-
-padding:72px 0;
-
-border-top:1px solid var(--line);
-
-}
-
-.stage:first-child{
-
-border-top:none;
-
-}
-
-.stage-index-col{
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:space-between;
-
-}
-
-.stage-number{
-
-font-family:'Fraunces',serif;
-
-font-size:20px;
-
-color:var(--accent);
-
-}
-
-.stage-name{
-
-font-family:'Fraunces',serif;
-
-font-size:38px;
-
-margin-top:22px;
-
-line-height:1.1;
-
-}
-
-.stage-tick{
-
-margin-top:36px;
-
-width:34px;
-
-height:1px;
-
-background:var(--line-strong);
-
-}
-
-.service-list{
-
-list-style:none;
-
-border-top:1px solid var(--line);
-
-}
-
-.service-list li{
-
-display:grid;
-
-grid-template-columns:56px 1fr;
-
-padding:22px 0;
-
-border-bottom:1px solid var(--line);
-
-}
-
-.si{
-
-font-size:11px;
-
-letter-spacing:.08em;
-
-color:var(--ink-dim);
-
-}
-
-.sn{
-
-font-family:'Fraunces',serif;
-
-font-size:23px;
-
-}
-
-.service-list a{
-
-color:var(--ink);
-
-text-decoration:none;
-
-transition:.3s;
-
-}
-
-.service-list a:hover{
-
-color:var(--accent);
-
-}
-
-
-.video{
-
-margin-bottom:42px;
-
-padding:14px;
-
-background:#111111;
-
-border:1px solid var(--line);
-
-}
-
-.video iframe{
-
-width:100%;
-
-aspect-ratio:16/9;
-
-border:none;
-
-display:block;
-
-}
-
-.stage-note{
-
-margin-top:36px;
-
-padding-top:30px;
-
-border-top:1px solid var(--line);
-
-font-family:'Fraunces',serif;
-
-font-style:italic;
-
-font-size:18px;
-
-line-height:1.65;
-
-color:var(--ink-dim);
-
-}
-
-
-/* FOOTER */
-
-.page-foot{
-
-padding:40px 0 90px;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-}
-
-.foot-mark{
-
-font-family:'Fraunces',serif;
-
-font-size:14px;
-
-color:var(--ink-dim);
-
-}
-
-.foot-mark strong{
-
-font-family:'Inter';
-
-font-size:11px;
-
-letter-spacing:.14em;
-
-text-transform:uppercase;
-
-margin-right:10px;
-
-color:var(--ink);
-
-}
-
-.foot-loc{
-
-font-size:11px;
-
-letter-spacing:.18em;
-
-text-transform:uppercase;
-
-color:var(--ink-dim);
-
-}
-
-
-/* MOBILE */
-
-@media(max-width:860px){
-
-.wrap{
-
-padding:0 28px;
-
-}
-
-.page-head{
-
-padding-top:72px;
-
-padding-bottom:48px;
-
-}
-
-.head-foot{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:28px;
-
-}
-
-.stage{
-
-grid-template-columns:1fr;
-
-row-gap:26px;
-
-padding:52px 0;
-
-}
-
-.stage-index-col{
-
-flex-direction:row;
-
-gap:18px;
-
-}
-
-.stage-tick{
-
-display:none;
-
-}
-
-.stage-name{
-
-font-size:30px;
-
-margin-top:0;
-
-}
-
-.sn{
-
-font-size:20px;
-
-}
-
-.page-foot{
-
-flex-direction:column;
-
-align-items:flex-start;
-
-gap:14px;
-
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showreels — AeKaN DFilms</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0B0B0B;
+            --accent: #C69C5D;
+            --ink: #EDEAE4;
+            --ink-dim: #8C8781;
+            --line: rgba(237, 234, 228, .09);
+            --line-strong: rgba(237, 234, 228, .16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: auto;
+            padding: 0 64px;
+        }
+
+        /* HEADER */
+        .page-head {
+            padding-top: 110px;
+            padding-bottom: 70px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            letter-spacing: .32em;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 28px;
+        }
+
+        .title {
+            font-family: 'Fraunces', serif;
+            font-size: clamp(64px, 10vw, 148px);
+            font-weight: 300;
+            line-height: .92;
+            letter-spacing: -.01em;
+        }
+
+        .head-foot {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 46px;
+        }
+
+        .head-foot p {
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 19px;
+            line-height: 1.5;
+            color: var(--ink-dim);
+            max-width: 420px;
+        }
+
+        .head-meta {
+            font-size: 11px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            line-height: 2;
+            color: var(--ink-dim);
+        }
+
+        .head-meta span {
+            color: var(--ink);
+        }
+
+        /* Home Link Style */
+        .home-link {
+            text-decoration: none;
+            color: var(--ink);
+            transition: .3s;
+        }
+
+        .home-link:hover {
+            color: var(--accent);
+        }
+
+        /* MAIN */
+        main {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .stage {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            column-gap: 64px;
+            padding: 72px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .stage:first-child {
+            border-top: none;
+        }
+
+        .stage-index-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stage-number {
+            font-family: 'Fraunces', serif;
+            font-size: 20px;
+            color: var(--accent);
+        }
+
+        .stage-name {
+            font-family: 'Fraunces', serif;
+            font-size: 38px;
+            margin-top: 22px;
+            line-height: 1.1;
+        }
+
+        .stage-tick {
+            margin-top: 36px;
+            width: 34px;
+            height: 1px;
+            background: var(--line-strong);
+        }
+
+        .service-list {
+            list-style: none;
+            border-top: 1px solid var(--line);
+        }
+
+        .service-list li {
+            display: grid;
+            grid-template-columns: 56px 1fr;
+            padding: 22px 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .si {
+            font-size: 11px;
+            letter-spacing: .08em;
+            color: var(--ink-dim);
+        }
+
+        .sn {
+            font-family: 'Fraunces', serif;
+            font-size: 23px;
+        }
+
+        .service-list a {
+            color: var(--ink);
+            text-decoration: none;
+            transition: .3s;
+        }
+
+        .service-list a:hover {
+            color: var(--accent);
+        }
+
+        /* Video Container Grid (Optional layout improvement if you want videos side-by-side later, currently stacking) */
+        .video-gallery {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Horizontal Videos (16:9) */
+        .video {
+            margin-bottom: 42px;
+            padding: 14px;
+            background: #111111;
+            border: 1px solid var(--line);
+        }
+
+        .video iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border: none;
+            display: block;
+        }
+
+        /* Vertical Videos (9:16) */
+        .video-portrait {
+            max-width: 380px;
+            margin-bottom: 42px;
+            padding: 14px;
+            background: #111111;
+            border: 1px solid var(--line);
+        }
+
+        .video-portrait iframe {
+            width: 100%;
+            aspect-ratio: 9/16;
+            border: none;
+            display: block;
+        }
+
+        .stage-note {
+            margin-top: 36px;
+            padding-top: 30px;
+            border-top: 1px solid var(--line);
+            font-family: 'Fraunces', serif;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.65;
+            color: var(--ink-dim);
+        }
+
+        /* FOOTER */
+        .page-foot {
+            padding: 40px 0 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .foot-mark {
+            font-family: 'Fraunces', serif;
+            font-size: 14px;
+            color: var(--ink-dim);
+        }
+
+        .foot-mark strong {
+            font-family: 'Inter';
+            font-size: 11px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            margin-right: 10px;
+        }
+
+        .foot-mark strong .home-link {
+            color: var(--ink);
+        }
+
+        .foot-mark strong .home-link:hover {
+            color: var(--accent);
+        }
+
+        .foot-loc {
+            font-size: 11px;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            color: var(--ink-dim);
+        }
+
+        /* MOBILE */
+        @media(max-width:860px) {
+            .wrap {
+                padding: 0 28px;
+            }
+
+            .page-head {
+                padding-top: 72px;
+                padding-bottom: 48px;
+            }
+
+            .head-foot {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 28px;
+            }
+
+            .stage {
+                grid-template-columns: 1fr;
+                row-gap: 26px;
+                padding: 52px 0;
+            }
+
+            .stage-index-col {
+                flex-direction: row;
+                gap: 18px;
+            }
+
+            .stage-tick {
+                display: none;
+            }
+
+            .stage-name {
+                font-size: 30px;
+                margin-top: 0;
+            }
+
+            .sn {
+                font-size: 20px;
+            }
+
+            .video-portrait {
+                max-width: 100%;
+            }
+
+            .page-foot {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-<div class="wrap">
-
-<header class="page-head">
-
-<div class="eyebrow">
-
-Selected Works
-
-</div>
-
-<h1 class="title">
-
-Showreels
-
-</h1>
-
-<div class="head-foot">
-
-<p>
-
-A curated archive of commissioned work,
-commercial pieces and cinematic explorations.
-
-</p>
-
-<div class="head-meta">
-
-AeKaN DFilms
-
-<br>
-
-<span>
-
-Kangayam · Tamil Nadu
-
-</span>
-
-</div>
-
-</div>
-
-</header>
-
-
-
-<main>
-
-<section class="stage">
-
-<div class="stage-index-col">
-
-<div>
-
-<div class="stage-number">
-
-01
-
-</div>
-
-<div class="stage-name">
-
-Instagram
-
-</div>
-
-</div>
-
-<div class="stage-tick"></div>
-
-</div>
-
-<div>
-
-<ul class="service-list">
-
-<li>
-
-<span class="si">01</span>
-
-<span class="sn">
-
-<a href="https://www.instagram.com/reel/DaHOIxEhc4_/"
-
-target="_blank">
-
-Commercial Reel I
-
-</a>
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">02</span>
-
-<span class="sn">
-
-<a href="https://www.instagram.com/reel/DRMs7LgEq_7/"
-
-target="_blank">
-
-Commercial Reel II
-
-</a>
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">03</span>
-
-<span class="sn">
-
-<a href="https://www.instagram.com/reel/DZAAvgMyd0r/"
-
-target="_blank">
-
-Commercial Reel III
-
-</a>
-
-</span>
-
-</li>
-
-<li>
-
-<span class="si">04</span>
-
-<span class="sn">
-
-<a href="https://www.instagram.com/reel/DaFFSHES9xv/"
-
-target="_blank">
-
-Commercial Reel IV
-
-</a>
-
-</span>
-
-</li>
-
-</ul>
-
-</div>
-
-</section>
-
-
-
-<section class="stage">
-
-<div class="stage-index-col">
-
-<div>
-
-<div class="stage-number">
-
-02
-
-</div>
-
-<div class="stage-name">
-
-YouTube
-
-</div>
-
-</div>
-
-<div class="stage-tick"></div>
-
-</div>
-
-<div>
-
-<div class="video">
-
-<iframe
-src="https://www.youtube.com/embed/KJjJQfa-UqU?rel=0"
-allowfullscreen>
-
-</iframe>
-
-</div>
-
-
-<div class="video">
-
-<iframe
-src="https://www.youtube.com/embed/HfR4vuio8AY?rel=0"
-allowfullscreen>
-
-</iframe>
-
-</div>
-
-
-<div class="video">
-
-<iframe
-src="https://www.youtube.com/embed/ooi39w3S7L0?rel=0"
-allowfullscreen>
-
-</iframe>
-
-</div>
-
-
-<p class="stage-note">
-
-Selected works continue to evolve as new collaborations,
-experiments and commissioned projects emerge.
-
-</p>
-
-</div>
-
-</section>
-
-</main>
-
-
-
-<footer class="page-foot">
-
-<div class="foot-mark">
-
-<strong>
-
-AeKaN DFilms
-
-</strong>
-
-Independent Visual Storytelling Studio
-
-</div>
-
-<div class="foot-loc">
-
-Kangayam · Tamil Nadu
-
-</div>
-
-</footer>
-
-</div>
-
+    <div class="wrap">
+        <header class="page-head">
+            <div class="eyebrow">Selected Works</div>
+            <h1 class="title">Showreels</h1>
+            <div class="head-foot">
+                <p>A curated archive of commissioned work, commercial pieces and cinematic explorations.</p>
+                <div class="head-meta">
+                    <a href="index.html" class="home-link">AeKaN DFilms</a>
+                    <br>
+                    <span>Kangayam · Tamil Nadu</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="stage">
+                <div class="stage-index-col">
+                    <div>
+                        <div class="stage-number">01</div>
+                        <div class="stage-name">Instagram</div>
+                    </div>
+                    <div class="stage-tick"></div>
+                </div>
+                <div>
+                    <ul class="service-list">
+                        <li>
+                            <span class="si">01</span>
+                            <span class="sn"><a href="https://www.instagram.com/reel/DaHOIxEhc4_/" target="_blank">Commercial Reel I</a></span>
+                        </li>
+                        <li>
+                            <span class="si">02</span>
+                            <span class="sn"><a href="https://www.instagram.com/reel/DRMs7LgEq_7/" target="_blank">Commercial Reel II</a></span>
+                        </li>
+                        <li>
+                            <span class="si">03</span>
+                            <span class="sn"><a href="https://www.instagram.com/reel/DZAAvgMyd0r/" target="_blank">Commercial Reel III</a></span>
+                        </li>
+                        <li>
+                            <span class="si">04</span>
+                            <span class="sn"><a href="https://www.instagram.com/reel/DaFFSHES9xv/" target="_blank">Commercial Reel IV</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="stage">
+                <div class="stage-index-col">
+                    <div>
+                        <div class="stage-number">02</div>
+                        <div class="stage-name">YouTube</div>
+                    </div>
+                    <div class="stage-tick"></div>
+                </div>
+                <div class="video-gallery">
+                    <!-- Vertical Short Video 01 -->
+                    <div class="video-portrait">
+                        <iframe src="https://www.youtube.com/embed/V2x8ZmANy0A?rel=0" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Vertical Short Video 02 (Fixed from 16:9 to 9:16 Portrait) -->
+                    <div class="video-portrait">
+                        <iframe src="https://www.youtube.com/embed/KJjJQfa-UqU?rel=0" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Horizontal Master Video 01 -->
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/HfR4vuio8AY?rel=0" allowfullscreen></iframe>
+                    </div>
+
+                    <!-- Horizontal Master Video 02 -->
+                    <div class="video">
+                        <iframe src="https://www.youtube.com/embed/ooi39w3S7L0?rel=0" allowfullscreen></iframe>
+                    </div>
+
+                    <p class="stage-note">
+                        Selected works continue to evolve as new collaborations, experiments and commissioned projects emerge.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="page-foot">
+            <div class="foot-mark">
+                <strong><a href="index.html" class="home-link">AeKaN DFilms</a></strong> Independent Visual Storytelling Studio
+            </div>
+            <div class="foot-loc">Kangayam · Tamil Nadu</div>
+        </footer>
+    </div>
 </body>
 
 </html>
