@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aekan1991.github.io/AeKaNDFilms/sitemap.xml
