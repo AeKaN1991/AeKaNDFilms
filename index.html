@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AeKaN DFilms</title>
+    <title>AeKaN DFilms — Independent Visual Storytelling Studio Kangayam</title>
 
     <!-- Primary SEO Meta Tags -->
     <meta name="description" content="AeKaN DFilms is an independent visual storytelling studio in Kangayam, Tamil Nadu, specializing in cinematography, scene-referred workflows, and cinematic brand narratives.">
     <meta name="keywords" content="AeKaN DFilms, Independent Visual Storytelling, Cinematographer Kangayam, Color Science, Cinematic Brand Narratives, Turnkey Production, Film Studio Tamil Nadu">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.aekandfilms.com/" />
 
     <!-- Open Graph / WhatsApp / Social Media Link Preview -->
     <meta property="og:type" content="website">
@@ -17,6 +18,23 @@
     <meta property="og:title" content="AeKaN DFilms — Independent Visual Storytelling">
     <meta property="og:description" content="Independent visual storytelling studio specializing in cinematography and advanced imaging science.">
     <meta property="og:image" content="https://www.aekandfilms.com/assets/thumbnail.jpg">
+
+    <!-- JSON-LD Schema Markup for Google Local SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "AeKaN DFilms",
+      "description": "Independent visual storytelling studio specializing in cinematography and advanced imaging science.",
+      "url": "https://www.aekandfilms.com/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kangayam",
+        "addressRegion": "Tamil Nadu",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,6 +87,19 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+
+        /* SEO Specific Hidden Class (Visually Hidden but Readable by Google) */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
 
         /* HEADER */
@@ -156,7 +187,7 @@
             font-weight: 300;
             line-height: .88;
             letter-spacing: -0.03em;
-            margin-bottom: 72px; /* Tagline நீக்கப்பட்டதால் H1 இடைவெளி அதிகரிக்கப்பட்டுள்ளது */
+            margin-bottom: 72px;
         }
 
         .service-stage {
@@ -238,11 +269,6 @@
             color: var(--ink-dim);
         }
 
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
         @media(max-width:860px) {
             .wrap { padding: 0 28px; }
             header { padding-top: 52px; gap: 20px; }
@@ -268,21 +294,29 @@
             </nav>
         </header>
 
-        <section class="hero">
-            <div class="eyebrow">Independent Visual Storytelling</div>
-            <h1>AeKaN<br>DFilms</h1>
+        <main id="content">
+            <section class="hero">
+                <div class="eyebrow">Independent Visual Storytelling</div>
+                
+                <!-- Google Keywords injected safely inside H1 via .sr-only -->
+                <h1 aria-label="AeKaN DFilms - Independent Visual Storytelling Studio & Cinematography Kangayam">
+                    AeKaN<br>DFilms
+                    <span class="sr-only">— Independent Visual Storytelling Studio &amp; Cinematography Kangayam, Tamil Nadu</span>
+                </h1>
 
-            <div class="service-stage">
-                <span>Turnkey Production</span>
-                <span>Cinematic Brand Narratives</span>
-                <span>Bespoke Look Development &amp; DI</span>
-            </div>
+                <!-- Core strengths made accessible for bots -->
+                <div class="service-stage" aria-label="Core Expertise">
+                    <span>Turnkey Production</span>
+                    <span>Cinematic Brand Narratives</span>
+                    <span>Bespoke Look Development &amp; DI</span>
+                </div>
 
-            <div class="identity-line">
-                VISUAL DIRECTION • CINEMATOGRAPHY • COLOR SCIENCE •<br>
-                SCENE-REFERRED WORKFLOWS
-            </div>
-        </section>
+                <div class="identity-line">
+                    VISUAL DIRECTION • CINEMATOGRAPHY • COLOR SCIENCE •<br>
+                    SCENE-REFERRED WORKFLOWS
+                </div>
+            </section>
+        </main>
 
         <footer>
             <div class="footer-brand">AeKaN DFilms</div>
