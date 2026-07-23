@@ -10,16 +10,13 @@
     <meta name="description" content="AeKaN DFilms is an independent visual storytelling studio in Kangayam, Tamil Nadu, specializing in cinematography, scene-referred workflows, and cinematic brand narratives.">
     <meta name="keywords" content="AeKaN DFilms, Independent Visual Storytelling, Cinematographer Kangayam, Color Science, Cinematic Brand Narratives, Turnkey Production, Film Studio Tamil Nadu">
     <meta name="robots" content="index, follow">
-    <!-- FIX: GitHub Pages உண்மையான லிங்கிற்கு மாற்றப்பட்டுள்ளது -->
     <link rel="canonical" href="https://aekan1991.github.io/AeKaNDFilms/" />
 
     <!-- Open Graph / WhatsApp / Social Media Link Preview -->
     <meta property="og:type" content="website">
-    <!-- FIX: GitHub Pages உண்மையான லிங்கிற்கு மாற்றப்பட்டுள்ளது -->
     <meta property="og:url" content="https://aekan1991.github.io/AeKaNDFilms/">
     <meta property="og:title" content="AeKaN DFilms — Independent Visual Storytelling">
     <meta property="og:description" content="Independent visual storytelling studio specializing in cinematography and advanced imaging science.">
-    <!-- FIX: GitHub Pages உண்மையான லிங்கிற்கு மாற்றப்பட்டுள்ளது -->
     <meta property="og:image" content="https://aekan1991.github.io/AeKaNDFilms/assets/thumbnail.jpg">
 
     <!-- JSON-LD Schema Markup for Google Local SEO -->
@@ -29,7 +26,6 @@
       "@type": "LocalBusiness",
       "name": "AeKaN DFilms",
       "description": "Independent visual storytelling studio specializing in cinematography and advanced imaging science.",
-      // FIX: URL உண்மையான லிங்கிற்கு மாற்றப்பட்டுள்ளது
       "url": "https://aekan1991.github.io/AeKaNDFilms/",
       "address": {
         "@type": "PostalAddress",
@@ -64,7 +60,8 @@
         }
 
         body {
-            background: url("IMG_1002.png");
+            background-color: #0B0B0B; /* Image லோட் ஆகாவிட்டாலும் Black background இருக்கும் */
+            background-image: url("IMG_1002.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -93,7 +90,7 @@
             justify-content: space-between;
         }
 
-        /* SEO Specific Hidden Class (Visually Hidden but Readable by Google) */
+        /* SEO Specific Hidden Class */
         .sr-only {
             position: absolute;
             width: 1px;
@@ -220,14 +217,6 @@
         .service-stage span:nth-child(2) { animation-delay: 4s; }
         .service-stage span:nth-child(3) { animation-delay: 8s; }
 
-        @keyframes serviceFade {
-            0% { opacity: 0; transform: translateY(5px); }
-            4% { opacity: 1; transform: translateY(0); }
-            30% { opacity: 1; transform: translateY(0); }
-            33.33% { opacity: 0; transform: translateY(-5px); }
-            100% { opacity: 0; }
-        }
-
         .identity-line {
             font-size: 11px;
             letter-spacing: .32em;
@@ -273,6 +262,26 @@
             color: var(--ink-dim);
         }
 
+        /* KEYFRAMES ANIMATIONS */
+        @keyframes fadeUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes serviceFade {
+            0% { opacity: 0; transform: translateY(5px); }
+            4% { opacity: 1; transform: translateY(0); }
+            30% { opacity: 1; transform: translateY(0); }
+            33.33% { opacity: 0; transform: translateY(-5px); }
+            100% { opacity: 0; }
+        }
+
         @media(max-width:860px) {
             .wrap { padding: 0 28px; }
             header { padding-top: 52px; gap: 20px; }
@@ -302,13 +311,11 @@
             <section class="hero">
                 <div class="eyebrow">Independent Visual Storytelling</div>
                 
-                <!-- Google Keywords injected safely inside H1 via .sr-only -->
                 <h1 aria-label="AeKaN DFilms - Independent Visual Storytelling Studio & Cinematography Kangayam">
                     AeKaN<br>DFilms
                     <span class="sr-only">— Independent Visual Storytelling Studio &amp; Cinematography Kangayam, Tamil Nadu</span>
                 </h1>
 
-                <!-- Core strengths made accessible for bots -->
                 <div class="service-stage" aria-label="Core Expertise">
                     <span>Turnkey Production</span>
                     <span>Cinematic Brand Narratives</span>
